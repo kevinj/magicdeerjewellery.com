@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use Template;
+
+my $name = shift || die "USAGE: $0 <name>\n";
+
+my $tt2 = Template->new;
+$tt2->process("template/$name.tt2", {}, "html/$name.html");
