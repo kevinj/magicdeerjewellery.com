@@ -12,7 +12,7 @@
     </tr>
     <tr>
         <td class="left"></td>
-        <td width="773">
+        <td>
             <div class="content">
                 [% content %]
             </div>
@@ -23,12 +23,12 @@
         <td class="menu" colspan="3">
             <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td><a href="home.html"><div class="navButton link_home"></div></a></td>
-                    <td><a href="about1.html"><div class="navButton link_about"></div></a></td>
-                    <td><a href="contact.html"><div class="navButton link_contact"></div></a></td>
-                    <td><a href="gallery1.html"><div class="navButton link_gallery"></div></a></td>
-                    <td><a href="testimonial.html"><div class="navButton link_test"></div></a></td>
-                    <td><a href="info.html"><div class="navButton link_info"></div></a></td>
+                    <td>[% INCLUDE rollover.tt2 file="link_home" href="home.html" %]</td>
+                    <td>[% INCLUDE rollover.tt2 file="link_about" href="about1.html" %]</td>
+                    <td>[% INCLUDE rollover.tt2 file="link_contact" href="contact.html" %]</td>
+                    <td>[% INCLUDE rollover.tt2 file="link_gallery" href="gallery1.html" %]</td>
+                    <td>[% INCLUDE rollover.tt2 file="link_testimonial" href="testimonial.html" %]</td>
+                    <td>[% INCLUDE rollover.tt2 file="link_info" href="info.html" %]</td>
                 </tr>
             </table>
         </td>

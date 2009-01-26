@@ -1,7 +1,7 @@
 PERL='/sw/bin/perl5.8.6'
 
 ALL_TEMPLATES=$(wildcard template/*.tt2)
-TEMPLATES=$(filter-out template/wrapper.tt2,$(ALL_TEMPLATES))
+TEMPLATES=template/home.tt2
 HTML=$(TEMPLATES:template/%.tt2=%.html)
 
 all: $(HTML)

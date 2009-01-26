@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $url = shift || die "Usage: $0 <file_url>";
+$url =~ s{.*/old/images/(.*).jpg}{$1} or die "Woah";
+
+my $file = "old/images/${url}.jpg";
+my $hover = "old/images/${url}_f2.jpg";
+
+die "no file: $file" unless -f $file;
+die "no file $hover" unless -f $hover;
+
+print "call it what? ";
+my $new = <STDIN>;
+chomp $new;
+
+system "cp $file images/$new.jpg";
+system "cp $hover images/${new}_hover.jpg";

@@ -1,0 +1,43 @@
+[% WRAPPER wrapper.tt2 %]
+<table>
+    <tr>
+        <td>
+            [% INCLUDE rollover.tt2 file="home1" %]
+        </td>
+        <td rowspan="2">
+            <b>Welcome to Magic Deer Jewellery!</b>
+
+            <p>
+                Thank you for visiting our website! We are a dedicated team
+                of qualified master goldsmiths, educated and trained in
+                Europe, with decades of experience. We offer a wide range of 
+                services, specializing in the design and creation of
+                one-of-a-kind, custom, hand-crafted fine jewellery in 18 and 
+                19 karat gold and platinum, using the finest gemstones. Our 
+                designs and your ideas come to life through a creative
+                process based on the traditions of the ancient craft of
+                goldsmithing. Whether you need an engagement ring or wedding 
+                bands, earrings or a pendant, a handmade chain or a bracelet,
+                corporate jewellery, a complicated repair or a simple sizing
+                come and see us first! We hope to see you soon in Port Moody,
+                the City of Arts.
+            </p>
+            <p>
+                Andrea Orosz & Tibor Papp
+                Jewellery Designers & Master Goldsmiths
+            </p>
+        </td>
+        <td>
+            [% INCLUDE rollover.tt2 file="home3" %]
+        </td>
+    </tr>
+    <tr>
+        <td>
+            [% INCLUDE rollover.tt2 file="home2" %]
+        </td>
+        <td>
+            [% INCLUDE rollover.tt2 file="home4" %]
+        </td>
+    </tr>
+</table>
+[% END %]
