@@ -1,1 +1,38 @@
-hi
+<html>
+<head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="description" content="FW MX DW MX HTML">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+<table class="main" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="header" colspan="3"></td>
+    </tr>
+    <tr>
+        <td class="left"></td>
+        <td width="773">
+            <div class="content">
+                [% content %]
+            </div>
+        </td>
+        <td class="right"></td>
+    </tr>
+    <tr>
+        <td class="menu" colspan="3">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><a href="home.html"><div class="navButton link_home"></div></a></td>
+                    <td><a href="about1.html"><div class="navButton link_about"></div></a></td>
+                    <td><a href="contact.html"><div class="navButton link_contact"></div></a></td>
+                    <td><a href="gallery1.html"><div class="navButton link_gallery"></div></a></td>
+                    <td><a href="testimonial.html"><div class="navButton link_test"></div></a></td>
+                    <td><a href="info.html"><div class="navButton link_info"></div></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

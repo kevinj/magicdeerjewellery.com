@@ -1,0 +1,52 @@
+table {
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0;
+        border: 0;
+}
+tr, td {
+        padding: 0;
+        margin: 0;
+        border: 0;
+}
+.header {
+        background: url(../images/header.jpg);
+        height: 139px;
+        width: 800px;
+}
+.left {
+        background: url(../images/left.jpg);
+        width: 14px;
+}
+.right {
+        background: url(../images/right.jpg);
+        width: 14px;
+}
+.content {
+        margin: 0;
+        height: 413px;
+        width:783px;
+        background-color: #444;
+        color: #FFF;
+        text-align: center;
+}
+.menu {
+        background: url(../images/right.jpg);
+        width: 800px;
+}
+
+.navButton {
+    height: 48px;
+}
+.link_home { width: 118px; background: url(../images/link_home.jpg) }
+a:hover .link_home { background: url(../images/link_home_hover.jpg) }
+.link_about { width: 121px; background: url(../images/link_about.jpg) }
+a:hover .link_about { background: url(../images/link_about_hover.jpg) }
+.link_contact { width: 110px; background: url(../images/link_contact.jpg) }
+a:hover .link_contact { background: url(../images/link_contact_hover.jpg) }
+.link_gallery { width: 124px; background: url(../images/link_gallery.jpg) }
+a:hover .link_gallery { background: url(../images/link_gallery_hover.jpg) }
+.link_test { width: 144px; background: url(../images/link_testimonial.jpg) }
+a:hover .link_test { background: url(../images/link_testimonial_hover.jpg) }
+.link_info { width: 182px; background: url(../images/link_info.jpg) }
+a:hover .link_info { background: url(../images/link_info_hover.jpg) }

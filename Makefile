@@ -1,9 +1,13 @@
 PERL='/sw/bin/perl5.8.6'
 
-TEMPLATES=$(wildcard template/*.tt2)
-HTML=$(TEMPLATES:template/%.tt2=html/%.html)
+ALL_TEMPLATES=$(wildcard template/*.tt2)
+TEMPLATES=$(filter-out template/wrapper.tt2,$(ALL_TEMPLATES))
+HTML=$(TEMPLATES:template/%.tt2=%.html)
 
 all: $(HTML)
 
-$(HTML): $(TEMPLATES)
-	$(PERL) bin/process $(@:html/%.html=%)
+clean:
+	rm $(HTML)
+
+$(HTML): $(ALL_TEMPLATES)
+	$(PERL) bin/process $(@:%.html=%)

@@ -6,5 +6,7 @@ use Template;
 
 my $name = shift || die "USAGE: $0 <name>\n";
 
-my $tt2 = Template->new;
-$tt2->process("template/$name.tt2", {}, "html/$name.html");
+my $tt2 = Template->new({
+    INCLUDE_PATH => 'template',
+});
+$tt2->process("$name.tt2", {}, "$name.html") or die $tt2->error;
