@@ -15,5 +15,5 @@ print "call it what? ";
 my $new = <STDIN>;
 chomp $new;
 
-system "cp $file images/$new.jpg";
-system "cp $hover images/${new}_hover.jpg";
+system "cp '$file' images/$new.jpg";
+system "cp '$hover' images/${new}_hover.jpg";

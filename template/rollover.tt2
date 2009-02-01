@@ -2,7 +2,11 @@
 [% IF href %]
 <a class="navButton" href="[% href %]">
 [% END %]
+[% IF selected %]
+<img src="images/[% file %]_hover.jpg" />
+[% ELSE %]
 <img src="images/[% file %].jpg" onmouseover="this.src='images/[% file %]_hover.jpg'" onmouseout="this.src='images/[% file %].jpg'"/>
+[% END %]
 [% IF href %]
 </a>
 [% END %]

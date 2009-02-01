@@ -9,26 +9,17 @@ tr, td {
     margin: 0;
     border: 0;
 }
-.header {
-    background: url(../images/header.jpg);
-    height: 139px;
+td.left { padding: 25px 20px 0 20px }
+td.right { padding: 25px 20px 0 20px }
+.wrapper {
     width: 800px;
-}
-.left {
-    background: url(../images/left.jpg);
-    width: 14px;
-}
-.right {
-    background: url(../images/right.jpg);
-    width: 13px;
+    background: url(../images/background.png);
 }
 .content {
-    margin: 0;
+    margin: 0 20px;
     height: 413px;
-    width:773px;
-    background-color: #4D4D4D;
     color: #FFF;
-    text-align: center;
+    background-color: #4D4D4D;
 }
 
 .content p {

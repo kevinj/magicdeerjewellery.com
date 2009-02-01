@@ -1,38 +1,48 @@
 <html>
 <head>
-    <title>Title</title>
+    <title>[% title %]</title>
     <meta http-equiv="Content-Type" content="text/html;">
     <meta name="description" content="FW MX DW MX HTML">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body bgcolor="#ffffff">
-<table class="main" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-        <td class="header" colspan="3"></td>
-    </tr>
-    <tr>
-        <td class="left"></td>
-        <td>
-            <div class="content">
-                [% content %]
-            </div>
-        </td>
-        <td class="right"></td>
-    </tr>
-    <tr>
-        <td class="menu" colspan="3">
-            <table border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td>[% INCLUDE rollover.tt2 file="link_home" href="home.html" %]</td>
-                    <td>[% INCLUDE rollover.tt2 file="link_about" href="about1.html" %]</td>
-                    <td>[% INCLUDE rollover.tt2 file="link_contact" href="contact.html" %]</td>
-                    <td>[% INCLUDE rollover.tt2 file="link_gallery" href="gallery1.html" %]</td>
-                    <td>[% INCLUDE rollover.tt2 file="link_testimonial" href="testimonial.html" %]</td>
-                    <td>[% INCLUDE rollover.tt2 file="link_info" href="info.html" %]</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
+
+<div class="wrapper">
+    <img src="images/header.jpg"/>
+    <div class="content">
+        <table>
+            <tr>
+                <td class="left">
+                    [% INCLUDE rollover.tt2 file=images.0 %]
+                </td>
+                <td rowspan="2">
+                    [% content %]
+                </td>
+                <td class="right">
+                    [% INCLUDE rollover.tt2 file=images.2 %]
+                </td>
+            </tr>
+            <tr>
+                <td class="left">
+                    [% INCLUDE rollover.tt2 file=images.1 %]
+                </td>
+                <td class="right">
+                    [% INCLUDE rollover.tt2 file=images.3 %]
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            [% MACRO selected(link) 1 IF link == name %]
+            <td>[% INCLUDE rollover.tt2 selected=selected('home') file="link_home" href="home.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('about') file="link_about" href="about1.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('contact') file="link_contact" href="contact.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('gallery') file="link_gallery" href="gallery1.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('testimonial') file="link_testimonial" href="testimonial.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('info') file="link_info" href="info.html" %]</td>
+        </tr>
+    </table>
 </body>
 </html>
