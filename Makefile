@@ -11,3 +11,4 @@ clean:
 
 $(HTML): $(ALL_TEMPLATES)
 	$(PERL) bin/process $(@:%.html=%)
+	@grep $@ .gitignores >/dev/null || echo $@ >> .gitignores && :
