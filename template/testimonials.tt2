@@ -1,0 +1,29 @@
+[% WRAPPER wrapper.tt2
+    name="testimonial"
+    title="Testimonials"
+    links=[['testimonials1','testimonials2','testimonials3']]
+%]
+<p>
+Thank you for my exceptionally beautiful earrings... your flawless
+execution is absolute artistry! With sincere appreciation,<br/>
+<i>Ronaye MaLette, Vancouver, Canada</i>
+</p>
+
+<p>
+The proposal happened on the beach Wednesday evening, during the
+fireworks. Terai and Csaba were very happy for the ring you made.
+Thank you again,<br/>
+<i>Marika & Csaba Hegedus, Vancouver, Canada</i>
+</p>
+
+<p>
+My wife and I are so pleased to have met Andrea and Tibor. From the
+moment we sat down to explain our ideas, to the moment they finally
+delivered our wedding rings, we were well taken care of. In fact, the
+level of service we received far exceeded anything we ever expected.
+They were fantastic! Their products and service are a reflection of
+the good people they are and their passion for what they do. Truly, a
+cut above! Thank you for working so hard for us<br/>
+<i>Attila and SherryLynn Vaski, Vancouver, Canada</i>
+</p>
+[% END %]

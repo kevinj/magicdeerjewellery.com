@@ -1,7 +1,7 @@
 [% WRAPPER wrapper.tt2
     name="about"
     title="About Magic Deer Jewellery"
-    images=['about1_1','about1_2','about1_3','about1_4']
+    links=[['about1_1','about1_2'],['about1_3','about1_4']]
 %]
     <b>Luxury You Can Afford</b>
 

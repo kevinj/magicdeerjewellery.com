@@ -1,0 +1,9 @@
+[% WRAPPER wrapper.tt2
+    name="gallery"
+    title="Gallery"
+    links=[['gallery1_1','gallery1_2','gallery1_3','gallery1_4'],
+           ['gallery1_5','gallery1_6','gallery1_7','gallery1_8']]
+%]
+<img src="images/gallery1_1_big.jpg"/>
+<div class="caption">18 Karat Yellow Gold Handmade Chain</div>
+[% END %]

@@ -1,0 +1,6 @@
+[% WRAPPER wrapper.tt2
+    name="gallery"
+    title=""
+    links=[[]]
+%]
+[% END %]

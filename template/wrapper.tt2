@@ -7,29 +7,34 @@
 </head>
 <body bgcolor="#ffffff">
 
+[% last = links.0.size() > links.1.size() ? links.0.size() : links.1.size() %]
+
 <div class="wrapper">
     <img src="images/header.jpg"/>
     <div class="content">
-        <table>
+        <table class="main">
             <tr>
-                <td class="left">
-                    [% INCLUDE rollover.tt2 file=images.0 %]
+                <td class="top left">
+                    [% INCLUDE rollover.tt2 file=links.0.0 IF links.0.0 %]
                 </td>
-                <td rowspan="2">
+                <td rowspan="[% last %]">
                     [% content %]
                 </td>
-                <td class="right">
-                    [% INCLUDE rollover.tt2 file=images.2 %]
+                <td class="top right">
+                    [% INCLUDE rollover.tt2 file=links.1.0 IF links.1.0 %]
                 </td>
             </tr>
+            [% last = last - 1 %]
+            [% FOR i = [1 .. last] %]
             <tr>
-                <td class="left">
-                    [% INCLUDE rollover.tt2 file=images.1 %]
+                <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
+                    [% INCLUDE rollover.tt2 file=links.0.$i IF links.0.$i %]
                 </td>
-                <td class="right">
-                    [% INCLUDE rollover.tt2 file=images.3 %]
+                <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
+                    [% INCLUDE rollover.tt2 file=links.1.$i IF links.1.$i %]
                 </td>
             </tr>
+            [% END %]
         </table>
     </div>
 
@@ -40,7 +45,7 @@
             <td>[% INCLUDE rollover.tt2 selected=selected('about') file="link_about" href="about1.html" %]</td>
             <td>[% INCLUDE rollover.tt2 selected=selected('contact') file="link_contact" href="contact.html" %]</td>
             <td>[% INCLUDE rollover.tt2 selected=selected('gallery') file="link_gallery" href="gallery1.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('testimonial') file="link_testimonial" href="testimonial.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('testimonial') file="link_testimonial" href="testimonials.html" %]</td>
             <td>[% INCLUDE rollover.tt2 selected=selected('info') file="link_info" href="info.html" %]</td>
         </tr>
     </table>

@@ -1,0 +1,28 @@
+[% WRAPPER wrapper.tt2
+    name="contact"
+    title="Magic Deer Jewellery"
+    links=[['contact1','contact2','contact3']]
+%]
+    <b>Contact</b>
+
+    <p>
+    Studio location: Suite 4 - 86 Moody Street, Port Moody, British Columbia
+    V3H 2P6, Canada
+    Directions: You find us in the north-eastern corner at the
+    intersection of Moody
+    </p>
+
+    <p>
+    Street and St. Johns Street. (Second floor in the grey building of the
+    "Great   Canadian Card Company")
+    Hours: To best serve you please call ahead for an appointment!
+    </p>
+
+    <p>
+    Telephone: +778 318 0624
+    </p>
+
+    <p>
+    Email: info@magicdeerjewellery.com
+    </p>
+[% END %]
