@@ -1,4 +1,4 @@
-body, p, td {
+body, p, td, div, h3 {
     font-size: 10pt;
     font-weight: normal;
     font-family: tahoma, verdana, arial, helvetica, sans-serif;
@@ -29,6 +29,19 @@ td.bottom {
 }
 td.middle {
     padding: 0 15px 0 15px;
+}
+
+.accordion {
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+.accordion h3 a {
+    color: #fff;
+}
+.accordion div div{
+    font-size: 8pt;
 }
 
 .wrapper {

@@ -11,6 +11,5 @@ clean:
 	rm $(HTML)
 
 %.html: $(OTHER_TEMPLATES) template/%.tt2
-	echo $(@:%.html=template/%.tt2)
 	$(PERL) bin/process $(@:%.html=%)
 	@grep $@ .gitignore >/dev/null || echo $@ >> .gitignore && :

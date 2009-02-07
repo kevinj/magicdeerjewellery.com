@@ -4,6 +4,18 @@
     <meta http-equiv="Content-Type" content="text/html;">
     <meta name="description" content="FW MX DW MX HTML">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript" src="javascript/jquery-1.3.1.js"></script>
+    <script type="text/javascript" src="javascript/jquery.ui.1.6rc6.js"></script>
+    <script>
+        $(function() {
+            jQuery('.accordion')
+                .accordion({
+                    header: "h3",
+                    clearStyle: true,
+                    autoHeight: false
+                });
+        });
+    </script>
 </head>
 <body bgcolor="#ffffff">
 
