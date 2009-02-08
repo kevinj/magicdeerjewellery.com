@@ -5,21 +5,10 @@
     <meta name="description" content="FW MX DW MX HTML">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script type="text/javascript" src="javascript/jquery-1.3.1.js"></script>
-    <script type="text/javascript" src="javascript/jquery.ui.1.6rc6.js"></script>
-    <script>
-        $(function() {
-            jQuery('.accordion')
-                .accordion({
-                    header: "h3",
-                    clearStyle: true,
-                    autoHeight: false
-                });
-        });
-    </script>
 </head>
 <body bgcolor="#ffffff">
 
-[% last = links.0.size() > links.1.size() ? links.0.size() : links.1.size() %]
+[% last = imgs.0.size() > imgs.1.size() ? imgs.0.size() : imgs.1.size() %]
 
 <div class="wrapper">
     <img src="images/header.jpg"/>
@@ -27,23 +16,23 @@
         <table class="main">
             <tr>
                 <td class="top left">
-                    [% INCLUDE rollover.tt2 file=links.0.0 IF links.0.0 %]
+                    [% INCLUDE rollover.tt2 href=hrefs.0.0 file=imgs.0.0 IF imgs.0.0 %]
                 </td>
                 <td rowspan="[% last %]">
                     [% content %]
                 </td>
                 <td class="top right">
-                    [% INCLUDE rollover.tt2 file=links.1.0 IF links.1.0 %]
+                    [% INCLUDE rollover.tt2 href=hrefs.1.0 file=imgs.1.0 IF imgs.1.0 %]
                 </td>
             </tr>
             [% last = last - 1 %]
             [% FOR i = [1 .. last] %]
             <tr>
                 <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
-                    [% INCLUDE rollover.tt2 file=links.0.$i IF links.0.$i %]
+                    [% INCLUDE rollover.tt2 href=hrefs.0.$i file=imgs.0.$i IF imgs.0.$i %]
                 </td>
                 <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
-                    [% INCLUDE rollover.tt2 file=links.1.$i IF links.1.$i %]
+                    [% INCLUDE rollover.tt2 href=hrefs.1.$i file=imgs.1.$i IF imgs.1.$i %]
                 </td>
             </tr>
             [% END %]

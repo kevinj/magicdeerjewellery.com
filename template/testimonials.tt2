@@ -1,7 +1,7 @@
 [% WRAPPER wrapper.tt2
     name="testimonial"
     title="Testimonials"
-    links=[['testimonials1','testimonials2','testimonials3']]
+    imgs=[['testimonials1','testimonials2','testimonials3']]
 %]
 <p>
 Thank you for my exceptionally beautiful earrings... your flawless
