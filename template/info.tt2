@@ -1,153 +1,157 @@
 [% WRAPPER wrapper.tt2
-    name="gallery"
+    name="info"
     title=""
-    imgs=[['info1','info2'],['info3','info4']]
+    imgs=[[
+            {name => 'info1', onclick="showSection('.goldsmithing')"},
+            {name => 'info2', onclick="showSection('.what')"}
+        ],[
+            {name => 'info3', onclick="showSection('.metals')" },
+            {name => 'info4', onclick="showSection('.gemstones')" }
+    ]]
 %]
-    <div id="accordion">
-        <div class="section">
-            <h3><a href="#">The Ancient Craft of Goldsmithing</a></h3>
-            <div>
-                Since the beginning of human history, people have adorned themselves
-                with jewellery. Gold has been worked in many cultures. Fine objects
-                from antiquity and modern times are treasured by museums and
-                collectors around the world.
-                In the Egyptian and Greco-Roman eras, jewellery became a symbol of
-                social rank and the jeweller's art as a well-respected craft was born.
-                In medieval Europe, goldsmiths and silversmiths were skilled artisans
-                of high repute, were organised in guilds and started using hallmarks.
+    <div class="section goldsmithing">
+        <h1>The Ancient Craft of Goldsmithing</h1>
+        <div>
+            Since the beginning of human history, people have adorned themselves
+            with jewellery. Gold has been worked in many cultures. Fine objects
+            from antiquity and modern times are treasured by museums and
+            collectors around the world.
+            In the Egyptian and Greco-Roman eras, jewellery became a symbol of
+            social rank and the jeweller's art as a well-respected craft was born.
+            In medieval Europe, goldsmiths and silversmiths were skilled artisans
+            of high repute, were organised in guilds and started using hallmarks.
 
-                The jeweller's trade, amongst many others, was dramatically changed by
-                the Industrial Revolution. In the 18th and 19th centuries, with the
-                use of mass production jewellery became affordable to almost everyone.
-                In the 20th century, the style, function and quality of jewellery
-                became highly diversified. Despite the fact, that fully educated and
-                experienced goldsmiths have the most extensive knowledge and skills to
-                practice as jewellers, unfortunately they have been loosing their
-                leading role, replaced by cheaper alternatives of lower quality.
-            </div>
+            The jeweller's trade, amongst many others, was dramatically changed by
+            the Industrial Revolution. In the 18th and 19th centuries, with the
+            use of mass production jewellery became affordable to almost everyone.
+            In the 20th century, the style, function and quality of jewellery
+            became highly diversified. Despite the fact, that fully educated and
+            experienced goldsmiths have the most extensive knowledge and skills to
+            practice as jewellers, unfortunately they have been loosing their
+            leading role, replaced by cheaper alternatives of lower quality.
         </div>
+    </div>
 
-        <div class="section">
-            <h3><a href="#">What is fine jewellery?</a></h3>
-            <div>
-                Nowadays, there is a large variety of jewellery available to consumers
-                in terms of quality, function, style, materials and fabrication
-                methods. The definition of "fine jewellery" is not an easy one partly
-                due to constant misuse of the expression. At Magic Deer Jewellery we
-                define it as; personal ornaments made of the most precious metals and
-                gems, distinguished by very "fine" design and quality workmanship.
+    <div class="section what">
+        <h1>What is fine jewellery?</h1>
+        <div>
+            Nowadays, there is a large variety of jewellery available to consumers
+            in terms of quality, function, style, materials and fabrication
+            methods. The definition of "fine jewellery" is not an easy one partly
+            due to constant misuse of the expression. At Magic Deer Jewellery we
+            define it as; personal ornaments made of the most precious metals and
+            gems, distinguished by very "fine" design and quality workmanship.
 
-                The value of a piece is determined by several factors such as; design,
-                craftsmanship, manufacturing methods and materials used. You can
-                expect to pay more for jewellery characterised by appealing look,
-                spotless finishing, and durability. As well, you can certainly expect
-                to pay more for a design that is custom handmade than for a
-                mass-produced model. Finally, you also have to expect to pay more for
-                more expensive metals, like platinum and higher quality and/or larger
-                gems.
-            </div>
+            The value of a piece is determined by several factors such as; design,
+            craftsmanship, manufacturing methods and materials used. You can
+            expect to pay more for jewellery characterised by appealing look,
+            spotless finishing, and durability. As well, you can certainly expect
+            to pay more for a design that is custom handmade than for a
+            mass-produced model. Finally, you also have to expect to pay more for
+            more expensive metals, like platinum and higher quality and/or larger
+            gems.
         </div>
+    </div>
 
-        <div class="section">
-            <h3><a href="#">Precious Metals</a></h3>
-            <div>
-                The three most commonly used precious metals in fine jewellery
-                fabrication are silver, gold and platinum. Silver is the least
-                expensive of them, bright white in color and very soft. Platinum is by
-                far the most expensive. It is bright greyish-white, very ductile and
-                the most resistant to tarnishing. In making fine jewellery, the most
-                widely used types of gold are: the 19 karat white, the 18 karat yellow
-                and white gold alloys. Pure gold is bright yellow and very malleable
-                it is actually too soft for most jewellery applications. Just like the
-                other two metals gold is usually alloyed to change its physical
-                properties. Alloying makes gold sturdier and more durable and greatly
-                changes its natural color. Depending on the alloy metals and their
-                quantity the natural color of gold can turn yellowish, pinkish or
-                white.
-            </div>
+    <div class="section metals">
+        <h1>Precious Metals</h1>
+        <div>
+            The three most commonly used precious metals in fine jewellery
+            fabrication are silver, gold and platinum. Silver is the least
+            expensive of them, bright white in color and very soft. Platinum is by
+            far the most expensive. It is bright greyish-white, very ductile and
+            the most resistant to tarnishing. In making fine jewellery, the most
+            widely used types of gold are: the 19 karat white, the 18 karat yellow
+            and white gold alloys. Pure gold is bright yellow and very malleable
+            it is actually too soft for most jewellery applications. Just like the
+            other two metals gold is usually alloyed to change its physical
+            properties. Alloying makes gold sturdier and more durable and greatly
+            changes its natural color. Depending on the alloy metals and their
+            quantity the natural color of gold can turn yellowish, pinkish or
+            white.
         </div>
+    </div>
 
-        <div class="section">
-            <h3><a href="#">Gemstones</a></h3>
-            <div>
-                Genuine natural gemstones are used in making fine jewellery. Generally
-                speaking, gemstones are basically attractive pieces of minerals, but
-                some organic materials -like pearls- are also considered gems. The
-                most precious gemstones include: diamond, ruby, sapphire, emerald,
-                opal and pearl. The majority of gems are cut and polished to enhance
-                attractive optical characteristics, such as color, lustre, brilliance
-                and dispersion. They can be cut as smooth, dome shaped cabochons or
-                multi-faceted, sparkling shapes like the brilliant, princess or
-                emerald cut. The value of gemstones is determined by their
-                availability, color, clarity, cut and weight therefore, their
-                price-range is very wide.
-            </div>
+    <div class="section gemstones">
+        <h1>Gemstones</h1>
+        <div>
+            Genuine natural gemstones are used in making fine jewellery. Generally
+            speaking, gemstones are basically attractive pieces of minerals, but
+            some organic materials -like pearls- are also considered gems. The
+            most precious gemstones include: diamond, ruby, sapphire, emerald,
+            opal and pearl. The majority of gems are cut and polished to enhance
+            attractive optical characteristics, such as color, lustre, brilliance
+            and dispersion. They can be cut as smooth, dome shaped cabochons or
+            multi-faceted, sparkling shapes like the brilliant, princess or
+            emerald cut. The value of gemstones is determined by their
+            availability, color, clarity, cut and weight therefore, their
+            price-range is very wide.
         </div>
+    </div>
 
-        <div class="section">
-            <h3><a href="#">Handmade vs. Cast Jewellery</a></h3>
-            <div>
-                The creation of fine jewellery is truly an art from the design concept
-                to the finishing touches. A fine goldsmith needs only his eyes and
-                hand tools to shape beautiful jewellery. Despite the latest
-                technological advances, which permit virtually anyone to become a
-                "jeweller", the human touch is still crucial in the world of fine
-                jewellery. The main method of creating a top-quality, one-of-a kind
-                piece is still hand fabrication. The most accomplished and
-                sophisticated designers still create their artwork entirely by hand.
+    <div class="section handmade">
+        <h1>Handmade vs. Cast Jewellery</h1>
+        <div>
+            The creation of fine jewellery is truly an art from the design concept
+            to the finishing touches. A fine goldsmith needs only his eyes and
+            hand tools to shape beautiful jewellery. Despite the latest
+            technological advances, which permit virtually anyone to become a
+            "jeweller", the human touch is still crucial in the world of fine
+            jewellery. The main method of creating a top-quality, one-of-a kind
+            piece is still hand fabrication. The most accomplished and
+            sophisticated designers still create their artwork entirely by hand.
 
-                The other, more widespread method to produce jewellery employs the
-                method of "lost-wax casting". In this case, the design is first
-                sculpted in wax. Today, this step can be done with the aid of computer
-                software and sophisticated machinery and the results are impressive.
-                The wax piece is then invested in special plaster. When the wax is
-                burned out in an oven it leaves a cavity behind, which is almost
-                identical to the original prototype. Finally, the cavity is filled
-                with molten metal reproducing the wax model in metal. Compared to hand
-                fabrication, the use of casting dramatically reduces production time.
-                Especially, when the wax pieces can be cast with the gemstones already
-                set in them.
+            The other, more widespread method to produce jewellery employs the
+            method of "lost-wax casting". In this case, the design is first
+            sculpted in wax. Today, this step can be done with the aid of computer
+            software and sophisticated machinery and the results are impressive.
+            The wax piece is then invested in special plaster. When the wax is
+            burned out in an oven it leaves a cavity behind, which is almost
+            identical to the original prototype. Finally, the cavity is filled
+            with molten metal reproducing the wax model in metal. Compared to hand
+            fabrication, the use of casting dramatically reduces production time.
+            Especially, when the wax pieces can be cast with the gemstones already
+            set in them.
 
-                Are there any drawbacks associated with casting? The age-old method of
-                lost-wax casting was perfected and adopted in the jewellery industry
-                in the early 20th century. The intent was to increase output and
-                reduce production costs. There are however, limitations associated
-                with this method. Although casting is a relatively simple technology
-                great care and discipline must be applied to achieve good, consistent
-                results. Porosity is the most frequent problem associated with
-                casting. It usually appears as tiny pits or holes in jewellery or
-                sometimes "cloudy," dull surfaces. In most cases, it is very time
-                consuming and difficult to get rid of imperfections during the
-                finishing of a cast item.
+            Are there any drawbacks associated with casting? The age-old method of
+            lost-wax casting was perfected and adopted in the jewellery industry
+            in the early 20th century. The intent was to increase output and
+            reduce production costs. There are however, limitations associated
+            with this method. Although casting is a relatively simple technology
+            great care and discipline must be applied to achieve good, consistent
+            results. Porosity is the most frequent problem associated with
+            casting. It usually appears as tiny pits or holes in jewellery or
+            sometimes "cloudy," dull surfaces. In most cases, it is very time
+            consuming and difficult to get rid of imperfections during the
+            finishing of a cast item.
 
-                In conclusion, there is definitely a place for casting in making fine
-                jewellery, as long as it is done professionally, with quality
-                equipment, knowledge, skills and the necessary diligence.
-                Unfortunately, in our highly competitive industry under constant price
-                pressure, some manufacturers tend to cut too many corners. Employing
-                unskilled or semi-skilled jewellers and skipping necessary steps in
-                the manufacturing process often result in poorly made jewellery that
-                should not be for sale in stores.
-            </div>
+            In conclusion, there is definitely a place for casting in making fine
+            jewellery, as long as it is done professionally, with quality
+            equipment, knowledge, skills and the necessary diligence.
+            Unfortunately, in our highly competitive industry under constant price
+            pressure, some manufacturers tend to cut too many corners. Employing
+            unskilled or semi-skilled jewellers and skipping necessary steps in
+            the manufacturing process often result in poorly made jewellery that
+            should not be for sale in stores.
         </div>
+    </div>
 
-        <div class="section">
-            <h3><a href="#">Jewellery Care</a></h3>
-            <div>
-                Fine jewellery is made of delicate and expensive materials. Precious
-                metals are relatively soft and can be easily scratched, dented, bent
-                or damaged.  Gemstones can crack or chip if hit or dropped. The
-                lifespan of jewellery can be significantly extended through good care.
-                Avoid wearing jewellery, especially rings while handling heavy, hard
-                objects and during any kind of rough labour, such as construction or
-                assembling.
+    <div class="section care">
+        <h1>Jewellery Care</h1>
+        <div>
+            Fine jewellery is made of delicate and expensive materials. Precious
+            metals are relatively soft and can be easily scratched, dented, bent
+            or damaged.  Gemstones can crack or chip if hit or dropped. The
+            lifespan of jewellery can be significantly extended through good care.
+            Avoid wearing jewellery, especially rings while handling heavy, hard
+            objects and during any kind of rough labour, such as construction or
+            assembling.
 
-                Periodically, jewellery should be checked for security. Clasps, locks,
-                links and settings must be fixed or replaced at the first sign of
-                trouble to avoid costly failures. Jewellery should be cleaned and
-                polished regularly to restore its lustre. For repair and maintenance
-                one should always trust a qualified and experienced goldsmith.
-            </div>
+            Periodically, jewellery should be checked for security. Clasps, locks,
+            links and settings must be fixed or replaced at the first sign of
+            trouble to avoid costly failures. Jewellery should be cleaned and
+            polished regularly to restore its lustre. For repair and maintenance
+            one should always trust a qualified and experienced goldsmith.
         </div>
     </div>
 

@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script type="text/javascript" src="javascript/jquery-1.3.1.js"></script>
     <script type="text/javascript" src="javascript/jquery.ui.1.6rc6.js"></script>
+    <script>
+        function showSection (selector) {
+            if (jQuery('.section:visible').size()) {
+                jQuery('.section:visible').fadeOut(function () {
+                    jQuery(selector).fadeIn();
+                });
+            }
+            else {
+                jQuery(selector).fadeIn();
+            }
+        }
+    </script>
 </head>
 <body bgcolor="#ffffff">
 
@@ -17,23 +29,23 @@
         <table class="main">
             <tr>
                 <td class="top left">
-                    [% INCLUDE rollover.tt2 href=hrefs.0.0 file=imgs.0.0 IF imgs.0.0 %]
+                    [% INCLUDE rollover.tt2 image=imgs.0.0 IF imgs.0.0 %]
                 </td>
                 <td rowspan="[% last %]">
-                    [% content %]
+                <div class="centre">[% content %]</div>
                 </td>
                 <td class="top right">
-                    [% INCLUDE rollover.tt2 href=hrefs.1.0 file=imgs.1.0 IF imgs.1.0 %]
+                    [% INCLUDE rollover.tt2 image=imgs.1.0 IF imgs.1.0 %]
                 </td>
             </tr>
             [% last = last - 1 %]
             [% FOR i = [1 .. last] %]
             <tr>
                 <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
-                    [% INCLUDE rollover.tt2 href=hrefs.0.$i file=imgs.0.$i IF imgs.0.$i %]
+                    [% INCLUDE rollover.tt2 image=imgs.0.$i IF imgs.0.$i %]
                 </td>
                 <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
-                    [% INCLUDE rollover.tt2 href=hrefs.1.$i file=imgs.1.$i IF imgs.1.$i %]
+                    [% INCLUDE rollover.tt2 image=imgs.1.$i IF imgs.1.$i %]
                 </td>
             </tr>
             [% END %]
@@ -43,12 +55,12 @@
     <table border="0" cellpadding="0" cellspacing="0">
         <tr>
             [% MACRO selected(link) 1 IF link == name %]
-            <td>[% INCLUDE rollover.tt2 selected=selected('home') file="link_home" href="home.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('about') file="link_about" href="about1.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('contact') file="link_contact" href="contact.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('gallery') file="link_gallery" href="gallery1.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('testimonial') file="link_testimonial" href="testimonials.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('info') file="link_info" href="info.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('home') image={name=>"link_home"} href="home.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('about') image={name=>"link_about"} href="about.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('contact') image={name=>"link_contact"} href="contact.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('gallery') image={name=>"link_gallery"} href="gallery1.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('testimonial') image={name=>"link_testimonial"} href="testimonials.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('info') image={name=>"link_info"} href="info.html" %]</td>
         </tr>
     </table>
 </body>

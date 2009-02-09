@@ -1,26 +1,81 @@
 [% WRAPPER wrapper.tt2
     name="about"
     title="About Magic Deer Jewellery"
-    imgs=[['about1_1','about1_2'],['about1_3','about1_4']]
+    imgs=[[
+            { name => 'about1', onclick => "showSection('.luxury')" },
+            { name => 'about2', onclick => "showSection('.design')" }
+        ], [
+            { name => 'about3', onclick => "showSection('.quality')" },
+            { name => 'about4', onclick => "showSection('.approach')" }
+        ]
+    ]
 %]
-    <b>Luxury You Can Afford</b>
+    <div class="section luxury" style="display:block">
+        <h1>Luxury You Can Afford</h1>
+        <h2>Personalized, flexible service, directly from certified master goldsmiths.</h2>
+        
+        <p>
+            At Magic Deer Jewellery, our main focus is the design and
+            creation of high-quality, custom, hand-fabricated fine
+            jewellery. We employ the most appropriate traditional and
+            modern techniques to meet your specific requirements and
+            budget. We are independently owned and operated; so the
+            price you pay reflects the true value of professional
+            workmanship and the finest quality materials. Come and visit
+            us for flexible, personalized service. Communicate directly
+            with the goldsmiths who will create your unique jewellery,
+            not a retailer on commission. Magic Deer Jewellery – luxury
+            you can afford!
+        </p>
+    </div>
 
-    <p>
-        Personalized, flexible service, directly from certified
-        master goldsmiths.
-    </p>
-    
-    <p>
-        At Magic Deer Jewellery, our main focus is the design and
-        creation of high-quality, custom, hand-fabricated fine
-        jewellery. We employ the most appropriate traditional and
-        modern techniques to meet your specific requirements and
-        budget. We are independently owned and operated; so the
-        price you pay reflects the true value of professional
-        workmanship and the finest quality materials. Come and visit
-        us for flexible, personalized service. Communicate directly
-        with the goldsmiths who will create your unique jewellery,
-        not a retailer on commission. Magic Deer Jewellery – luxury
-        you can afford!
-    </p>
+    <div class="section design">
+        <h1>Design</h1>
+        <h2>An original, durable, wearable piece of art</h2>
+
+        <p>
+            The production of an exquisite piece of jewellery starts with a
+            sophisticated design. The artwork has to be original, durable,
+            wearable and last but not least: beautiful. Our artistic talents,
+            years of training and experience equip us to create designs that meet
+            these requirements. We invite you to be part of the creative process
+            and together we will find the perfect answer. Whether your style is
+            classic or modern, simple or extravagant we will create your special
+            jewellery that will give you lasting pleasure. Do you have your own
+            design ideas? We can make it happen.
+        </p>
+    </div>
+
+    <div class="section quality">
+        <h1>Quality Craftsmanship</h1>
+        <h2>Talent, knowledge, skills</h2>
+
+        <p>
+            Even the most exciting original designs need real craftsmanship to
+            bring them truly alive. A finely made piece enhances the beauty of an
+            interesting design and the gemstones mounted in it. In addition, only
+            qualified and experienced goldsmiths can assure that the gemstones and
+            other parts are properly secured and that the jewellery can be worn
+            comfortably for a lifetime. Despite the technological developments
+            human input remains essential in the realm of fine jewellery. Be it
+            top-notch, hand-crafted, custom jewellery or the simplest repair, we
+            always provide superior quality.
+        </p>
+    </div>
+
+    <div class="section approach">
+        <h1>Approach</h1>
+        <h2>Commitment and passion</h2>
+
+        <p>
+            The creation of top quality, handmade, custom jewellery requires
+            several ingredients. These miniature works of art come into existence
+            through advanced tools and equipment, extensive knowledge, skills and
+            long experience. Above all, the most important part is the right
+            approach: a commitment to uncompromised quality and a passion for
+            creating beautiful, wearable pieces of art. This is what makes the
+            difference between a stunning piece and a bargain in the showcase;
+            this is the difference between us and a shopping mall.
+        </p>
+    </div>
 [% END %]

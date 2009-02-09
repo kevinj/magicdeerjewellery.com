@@ -1,7 +1,13 @@
 [% WRAPPER wrapper.tt2
     name="home"
     title="Magic Deer Jewellery"
-    imgs=[['home1','home2'],['home3','home4']]
+    imgs=[[
+        {name => 'home1', nolink => 1},
+        {name => 'home2', nolink => 1}
+        ],[
+        {name => 'home3', nolink => 1},
+        {name => 'home4', nolink => 1}
+    ]]
 %]
     <b>Welcome to Magic Deer Jewellery!</b>
 
@@ -20,8 +26,6 @@
         come and see us first! We hope to see you soon in Port Moody,
         the City of Arts.
     </p>
-    <p>
-        Andrea Orosz & Tibor Papp
-        Jewellery Designers & Master Goldsmiths
-    </p>
+    <i>Andrea Orosz & Tibor Papp</i><br/>
+    <i>Jewellery Designers & Master Goldsmiths</i>
 [% END %]

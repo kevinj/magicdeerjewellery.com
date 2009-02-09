@@ -1,8 +1,17 @@
 [% WRAPPER wrapper.tt2
     name="gallery"
     title="Gallery"
-    imgs=[['gallery3_1','gallery3_2','gallery3_3','gallery3_4'],
-          ['gallery3_5','gallery3_6','gallery3_7','gallery3_8']]
+    imgs=[[
+        {name => 'gallery3_1'},
+        {name => 'gallery3_2'},
+        {name => 'gallery3_3'},
+        {name => 'gallery3_4'}
+    ], [
+        {name => 'gallery3_5'},
+        {name => 'gallery3_6'},
+        {name => 'gallery3_7'},
+        {name => 'gallery3_8'}
+    ]]
 %]
 <img class="target" src="images/gallery3_1_big.png"/>
 <div style="display:none" class="caption">18 Karat Yellow Gold Handmade Chain</div>

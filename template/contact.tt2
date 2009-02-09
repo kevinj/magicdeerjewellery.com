@@ -1,7 +1,11 @@
 [% WRAPPER wrapper.tt2
     name="contact"
     title="Magic Deer Jewellery"
-    imgs=[['contact1','contact2','contact3']]
+    imgs=[[
+        {name => 'contact1', nolink => 1},
+        {name => 'contact2', nolink => 1},
+        {name => 'contact3', nolink => 1}
+    ]]
 %]
     <b>Contact</b>
 

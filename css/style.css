@@ -1,7 +1,22 @@
-body, p, td, div, h3 {
+body, p, td, div {
     font-size: 10pt;
     font-weight: normal;
     font-family: tahoma, verdana, arial, helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 2px;
+    padding: 0;
+}
+
+h2 {
+    font-size: 11pt;
+    font-weight: normal;
+    font-style: italic;
+    margin: 2px;
+    padding: 0;
 }
 
 body {
@@ -36,16 +51,7 @@ td.middle {
 }
 
 .section {
-    width: 300px;
-}
-.section h3 {
-    font-size: 11pt;
-}
-.section h3 a {
-    color: #FFF;
-}
-.section div {
-    font-size: 9pt;
+    display: none;
 }
 
 .pages {
@@ -56,9 +62,7 @@ td.middle {
     color: white;
 }
 
-.rollover img {
-    border: 0;
-}
+img { border: 0 }
 
 .wrapper {
     width: 800px;
@@ -75,6 +79,14 @@ td.middle {
 
 .content p {
     vertical-align: top;
+}
+
+.more {
+    text-align: center;
+}
+
+.more a {
+    color: #fff;
 }
 
 .caption {
