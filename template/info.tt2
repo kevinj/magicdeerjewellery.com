@@ -3,11 +3,10 @@
     title=""
     imgs=[['info1','info2'],['info3','info4']]
 %]
-    <div class="accordion">
-        <div>
+    <div id="accordion">
+        <div class="section">
             <h3><a href="#">The Ancient Craft of Goldsmithing</a></h3>
-
-            <div class="section">
+            <div>
                 Since the beginning of human history, people have adorned themselves
                 with jewellery. Gold has been worked in many cultures. Fine objects
                 from antiquity and modern times are treasured by museums and
@@ -28,10 +27,9 @@
             </div>
         </div>
 
-        <div>
+        <div class="section">
             <h3><a href="#">What is fine jewellery?</a></h3>
-
-            <div class="section">
+            <div>
                 Nowadays, there is a large variety of jewellery available to consumers
                 in terms of quality, function, style, materials and fabrication
                 methods. The definition of "fine jewellery" is not an easy one partly
@@ -50,10 +48,9 @@
             </div>
         </div>
 
-        <div>
+        <div class="section">
             <h3><a href="#">Precious Metals</a></h3>
-
-            <div class="section">
+            <div>
                 The three most commonly used precious metals in fine jewellery
                 fabrication are silver, gold and platinum. Silver is the least
                 expensive of them, bright white in color and very soft. Platinum is by
@@ -70,10 +67,9 @@
             </div>
         </div>
 
-        <div>
+        <div class="section">
             <h3><a href="#">Gemstones</a></h3>
-
-            <div class="section">
+            <div>
                 Genuine natural gemstones are used in making fine jewellery. Generally
                 speaking, gemstones are basically attractive pieces of minerals, but
                 some organic materials -like pearls- are also considered gems. The
@@ -88,10 +84,9 @@
             </div>
         </div>
 
-        <div style="display: none">
+        <div class="section">
             <h3><a href="#">Handmade vs. Cast Jewellery</a></h3>
-
-            <div class="section">
+            <div>
                 The creation of fine jewellery is truly an art from the design concept
                 to the finishing touches. A fine goldsmith needs only his eyes and
                 hand tools to shape beautiful jewellery. Despite the latest
@@ -112,13 +107,7 @@
                 fabrication, the use of casting dramatically reduces production time.
                 Especially, when the wax pieces can be cast with the gemstones already
                 set in them.
-            </div>
-        </div>
 
-        <div style="display:none";>
-            <h3><a href="#">...</a></h3>
-
-            <div class="section">
                 Are there any drawbacks associated with casting? The age-old method of
                 lost-wax casting was perfected and adopted in the jewellery industry
                 in the early 20th century. The intent was to increase output and
@@ -142,10 +131,9 @@
             </div>
         </div>
 
-        <div style="display:none">
+        <div class="section">
             <h3><a href="#">Jewellery Care</a></h3>
-
-            <div class="section">
+            <div>
                 Fine jewellery is made of delicate and expensive materials. Precious
                 metals are relatively soft and can be easily scratched, dented, bent
                 or damaged.  Gemstones can crack or chip if hit or dropped. The
@@ -162,4 +150,9 @@
             </div>
         </div>
     </div>
+
+    <script>
+        jQuery('.section').hide();
+        jQuery('.section:first').show();
+    </script>
 [% END %]

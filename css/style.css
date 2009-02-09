@@ -4,6 +4,10 @@ body, p, td, div, h3 {
     font-family: tahoma, verdana, arial, helvetica, sans-serif;
 }
 
+body {
+    background-color: #1D1D1D;
+}
+
 table {
     border-collapse: collapse;
     padding: 0;
@@ -31,21 +35,35 @@ td.middle {
     padding: 0 15px 0 15px;
 }
 
-.accordion {
-    height: 400px;
-    margin: 0;
-    padding: 0;
-    border: 1px solid red;
+.section {
+    width: 300px;
 }
-.accordion h3 a {
-    color: #fff;
+.section h3 {
+    font-size: 11pt;
 }
-.accordion div div{
-    font-size: 8pt;
+.section h3 a {
+    color: #FFF;
+}
+.section div {
+    font-size: 9pt;
+}
+
+.pages {
+    text-align: center;
+}
+
+.pages a {
+    color: white;
+}
+
+.rollover img {
+    border: 0;
 }
 
 .wrapper {
     width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     background: url(../images/background.png);
 }
 .content {
