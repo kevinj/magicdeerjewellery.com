@@ -1,0 +1,41 @@
+[% WRAPPER wrapper.tt2
+    name="gallery"
+    title="Gallery"
+    imgs=[[
+            {name => 'gallery1_1'},
+            {name => 'gallery1_2'},
+            {name => 'gallery1_3'},
+            {name => 'gallery1_4'}
+        ], [
+            {name => 'gallery1_5'},
+            {name => 'gallery1_6'},
+            {name => 'gallery1_7'},
+            {name => 'gallery1_8'}
+    ]]
+    more=1
+%]
+
+    <img class="target" src="images/gallery1_1_big.png"/>
+    <div class="pages">
+        <a href="javascript:setPage(1)">Page 1</a>
+        <a href="javascript:setPage(2)">Page 2</a>
+        <a href="javascript:setPage(3)">Page 3</a>
+    </div>
+
+<script>
+jQuery(function() {
+    jQuery('.rollover').click(function() {
+        var $this = jQuery(this);
+        var $img = $this.find('img');
+        var url = "images/" + $img.attr('name') + "_big.png";
+        jQuery('.target').fadeOut(function () {
+            jQuery('.target')
+                .attr('src', url)
+                .unbind('load')
+                .fadeIn();
+        });
+    });
+});
+</script>
+
+[% END %]

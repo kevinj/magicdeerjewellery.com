@@ -17,6 +17,15 @@
                 jQuery(selector).fadeIn();
             }
         }
+        function setPage (page) {
+            jQuery('.rollover img').each(function (){
+                var $this = $(this);
+                var name = $this.attr('name')
+                                .replace(/^gallery\d/, 'gallery' + page)
+                $this.attr('name', name);
+                $this.mouseout();
+            });
+        }
     </script>
 </head>
 <body bgcolor="#ffffff">
@@ -58,7 +67,7 @@
             <td>[% INCLUDE rollover.tt2 selected=selected('home') image={name=>"link_home"} href="home.html" %]</td>
             <td>[% INCLUDE rollover.tt2 selected=selected('about') image={name=>"link_about"} href="about.html" %]</td>
             <td>[% INCLUDE rollover.tt2 selected=selected('contact') image={name=>"link_contact"} href="contact.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('gallery') image={name=>"link_gallery"} href="gallery1.html" %]</td>
+            <td>[% INCLUDE rollover.tt2 selected=selected('gallery') image={name=>"link_gallery"} href="gallery.html" %]</td>
             <td>[% INCLUDE rollover.tt2 selected=selected('testimonial') image={name=>"link_testimonial"} href="testimonials.html" %]</td>
             <td>[% INCLUDE rollover.tt2 selected=selected('info') image={name=>"link_info"} href="info.html" %]</td>
         </tr>
