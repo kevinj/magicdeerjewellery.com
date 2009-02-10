@@ -13,3 +13,6 @@ clean:
 %.html: $(OTHER_TEMPLATES) template/%.tt2
 	$(PERL) bin/process $(@:%.html=%)
 	@grep $@ .gitignore >/dev/null || echo $@ >> .gitignore && :
+
+upload:
+	scp -r *.html images/ css/ vanjew@magicjewellery.com:
