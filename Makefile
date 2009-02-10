@@ -15,4 +15,4 @@ clean:
 	@grep $@ .gitignore >/dev/null || echo $@ >> .gitignore && :
 
 upload:
-	scp -P 222 -r *.html images/ css/ vanjew@magicdeerjewellery.com:
+	scp -P 222 -r *.html images/ css/ javascript/ vanjew@magicdeerjewellery.com:
