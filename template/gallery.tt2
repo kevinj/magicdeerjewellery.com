@@ -15,7 +15,9 @@
     more=1
 %]
 
-    <img class="target" src="images/gallery1_1_big.png"/>
+    <div style="width:437px; height:382px">
+        <img class="target" src="images/gallery1_1_big.png"/>
+    </div>
     <div class="pages">
         <a href="javascript:setPage(1)">Page 1</a>
         <a href="javascript:setPage(2)">Page 2</a>
@@ -29,11 +31,11 @@ jQuery(function() {
         var $img = $this.find('img');
         var url = "images/" + $img.attr('name') + "_big.png";
         jQuery('.target').fadeOut(function () {
-            jQuery('.target')
-                .attr('src', url)
-                .unbind('load')
-                .fadeIn();
+            $('.target').attr('src', url)
         });
+    });
+    jQuery('.target').bind('load', function () {
+        $('.target').fadeIn();
     });
 });
 </script>

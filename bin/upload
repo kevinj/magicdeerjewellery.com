@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Data::Dump 'dump';
+
+my $modfile = ".modtimes";
+
+sub load_times {
+    my $modtimes = {};
+    if (-f $modfile) {
+        open my $fh, "<$modfile";
+        my @lines = <$fh>;
+        $modtimes = eval(join "", @lines);
+    }
+    return $modtimes;
+}
+
+sub save_times {
+    my $modtimes = shift;
+    open my $fh, ">$modfile" or die $!;
+    print $fh dump $modtimes;
+    close $fh;
+}
+
+sub upload {
+    my ($glob, $to, $modtimes) = @_;
+    my @files =
+        grep { not exists $modtimes->{$_} or ($modtimes->{$_} < (stat $_)[9]) }
+        glob($glob);
+
+    system "scp -r -P 222 @files vanjew\@magicdeerjewellery.com:$to" if @files;
+    $modtimes->{$_} = (stat $_)[9] for @files;
+}
+
+my $modtimes = load_times;
+upload('*.html' => '', $modtimes);
+upload('images/*' => 'images', $modtimes);
+upload('javascript/*' => 'javascript', $modtimes);
+save_times ($modtimes);
