@@ -29,7 +29,9 @@
 </head>
 <body bgcolor="#ffffff">
 
-[% last = imgs.0.size() > imgs.1.size() ? imgs.0.size() : imgs.1.size() %]
+[% left = imgs.0 ? imgs.0.size() : 0 %]
+[% right = imgs.1 ? imgs.1.size() : 0 %]
+[% last = left > right ? left : right %]
 
 <div class="wrapper">
     <img src="images/header.jpg"/>
