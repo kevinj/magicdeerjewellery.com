@@ -1,4 +1,4 @@
-PERL='/sw/bin/perl5.8.6'
+PERL=$(shell which perl)
 
 ALL_TEMPLATES=$(wildcard template/*.tt2)
 OTHER_TEMPLATES=template/wrapper.tt2 template/rollover.tt2
