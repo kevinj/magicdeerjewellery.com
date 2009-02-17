@@ -1,43 +1,29 @@
+[% images = [
+        {name => "gallery${page}_1", section => "gallery${page}_1"},
+        {name => "gallery${page}_2", section => "gallery${page}_2"},
+        {name => "gallery${page}_3", section => "gallery${page}_3"},
+        {name => "gallery${page}_4", section => "gallery${page}_4"},
+        {name => "gallery${page}_5", section => "gallery${page}_5"},
+        {name => "gallery${page}_6", section => "gallery${page}_6"},
+        {name => "gallery${page}_7", section => "gallery${page}_7"},
+        {name => "gallery${page}_8", section => "gallery${page}_8"}
+] %]
+
 [% WRAPPER wrapper.tt2
     name="gallery"
     title="Gallery"
-    imgs=[[
-            {name => 'gallery1_1'},
-            {name => 'gallery1_2'},
-            {name => 'gallery1_3'},
-            {name => 'gallery1_4'}
-        ], [
-            {name => 'gallery1_5'},
-            {name => 'gallery1_6'},
-            {name => 'gallery1_7'},
-            {name => 'gallery1_8'}
-    ]]
+    imgs=[[ images.0, images.1, images.2, images.3 ],
+          [ images.4, images.5, images.6, images.7 ]]
     more=1
 %]
 
-    <div style="width:437px; height:382px">
-        <img class="target" src="images/gallery1_1_big.png"/>
-    </div>
-    <div class="pages">
-        <a href="javascript:setPage(1)">Page 1</a>
-        <a href="javascript:setPage(2)">Page 2</a>
-        <a href="javascript:setPage(3)">Page 3</a>
+    <div  style="width:437px; height:382px">
+        [% FOR img = images %]
+            <div class="section [% img.name %]">
+                <img class="target" src="images/[% img.name %]_big.png"/>
+            </div>
+        [% END %]
     </div>
 
-<script>
-jQuery(function() {
-    jQuery('.rollover').click(function() {
-        var $this = jQuery(this);
-        var $img = $this.find('img');
-        var url = "images/" + $img.attr('name') + "_big.png";
-        jQuery('.target').fadeOut(function () {
-            $('.target').attr('src', url)
-        });
-    });
-    jQuery('.target').bind('load', function () {
-        $('.target').fadeIn();
-    });
-});
-</script>
-
+    <script>$(function(){ showSection('gallery[% page %]_1') })</script>
 [% END %]
