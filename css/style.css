@@ -5,23 +5,49 @@ body, p, td, div {
 }
 
 h1 {
-    font-size: 10pt;
+    font-size: 11pt;
     font-weight: bold;
     margin: 2px;
     padding: 0;
 }
 
 h2 {
-    font-size: 11pt;
+    font-size: 10pt;
     font-weight: normal;
     font-style: italic;
     margin: 2px;
     padding: 0;
 }
 
-body {
-    background-color: #1D1D1D;
+h3 {
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 0;
 }
+
+body {
+    background-color: #2D2D2D;
+    color: #8d8d8d;
+}
+
+a.more {
+    float: right;
+    color: #8d8d8d;
+}
+
+.pages a {
+    color: #8d8d8d;
+}
+.content {
+    margin: 0 20px;
+    height: 413px;
+    background-color: #2D2D2D;
+}
+.content h1 {
+    text-align: center;
+}
+
 
 table {
     border-collapse: collapse;
@@ -58,10 +84,6 @@ td.middle {
     text-align: center;
 }
 
-.pages a {
-    color: white;
-}
-
 img { border: 0 }
 
 .wrapper {
@@ -70,13 +92,6 @@ img { border: 0 }
     margin-right: auto;
     background: url(../images/background.png);
 }
-.content {
-    margin: 0 20px;
-    height: 413px;
-    color: #FFF;
-    background-color: #4D4D4D;
-}
-
 .content p {
     vertical-align: top;
 }
@@ -86,7 +101,6 @@ img { border: 0 }
 }
 
 .more a {
-    color: #fff;
 }
 
 .caption {

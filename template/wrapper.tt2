@@ -5,27 +5,7 @@
     <meta name="description" content="FW MX DW MX HTML">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script type="text/javascript" src="javascript/jquery-1.3.1.min.js"></script>
-    <script>
-        function showSection (selector) {
-            if (jQuery('.section:visible').size()) {
-                jQuery('.section:visible').fadeOut(function () {
-                    jQuery(selector).fadeIn();
-                });
-            }
-            else {
-                jQuery(selector).fadeIn();
-            }
-        }
-        function setPage (page) {
-            jQuery('.rollover img').each(function (){
-                var $this = $(this);
-                var name = $this.attr('name')
-                                .replace(/^gallery\d/, 'gallery' + page)
-                $this.attr('name', name);
-                $this.mouseout();
-            });
-        }
-    </script>
+    <script type="text/javascript" src="javascript/functions.js"></script>
 </head>
 <body bgcolor="#ffffff">
 

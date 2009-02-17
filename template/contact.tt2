@@ -7,26 +7,23 @@
         {name => 'contact3', nolink => 1}
     ]]
 %]
-    <b>Contact</b>
+    <h3>Studio location: </h3>
+    Suite 4 - 86 Moody Street <br/>
+    Port Moody, British Columbia<br/>
+    V3H 2P6, Canada<br/>
 
-    <p>
-    Studio location: Suite 4 - 86 Moody Street, Port Moody, British Columbia
-    V3H 2P6, Canada
-    Directions: You find us in the north-eastern corner at the
-    intersection of Moody
-    </p>
+    <h3>Directions</h3>
+    You find us in the north-eastern corner at the
+    intersection of Moody Street and St. Johns Street.
+    (Second floor in the grey building of the
+    "Great Canadian Card Company")
 
-    <p>
-    Street and St. Johns Street. (Second floor in the grey building of the
-    "Great   Canadian Card Company")
-    Hours: To best serve you please call ahead for an appointment!
-    </p>
+    <h3>Hours</h3>
+    To best serve you please call ahead for an appointment!
 
-    <p>
-    Telephone: +778 318 0624
-    </p>
+    <h3>Telephone</h3>
+    778.318.0624
 
-    <p>
-    Email: info at magicdeerjewellery dot com
-    </p>
+    <h3>Email</h3>
+    info at magicdeerjewellery dot com
 [% END %]

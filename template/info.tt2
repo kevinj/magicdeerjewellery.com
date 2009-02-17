@@ -2,11 +2,13 @@
     name="info"
     title=""
     imgs=[[
-            {name => 'info1', onclick="showSection('.goldsmithing')"},
-            {name => 'info2', onclick="showSection('.what')"}
-        ],[
-            {name => 'info3', onclick="showSection('.metals')" },
-            {name => 'info4', onclick="showSection('.gemstones')" }
+            {name => 'info1', type => 'png', onclick => "showSection('.goldsmithing')"},
+            {name => 'info2', type => 'png', onclick => "showSection('.fineJewellery')"},
+            {name => 'info3', type => 'png', onclick => "showSection('.metals')" }
+        ], [
+            {name => 'info4', type => 'png', onclick => "showSection('.gemstones')" },
+            {name => 'info5', type => 'png', onclick => "showSection('.handmade')"},
+            {name => 'info6', type => 'png', onclick => "showSection('.care')"}
     ]]
 %]
     <div class="section goldsmithing">
@@ -32,7 +34,7 @@
         </div>
     </div>
 
-    <div class="section what">
+    <div class="section fineJewellery">
         <h1>What is fine jewellery?</h1>
         <div>
             Nowadays, there is a large variety of jewellery available to consumers
@@ -90,7 +92,7 @@
     </div>
 
     <div class="section handmade">
-        <h1>Handmade vs. Cast Jewellery</h1>
+        <h1>Handmade vs. Cast Jewellery (1/2)</h1>
         <div>
             The creation of fine jewellery is truly an art from the design concept
             to the finishing touches. A fine goldsmith needs only his eyes and
@@ -112,7 +114,13 @@
             fabrication, the use of casting dramatically reduces production time.
             Especially, when the wax pieces can be cast with the gemstones already
             set in them.
+        </div>
+        <a class="more" onclick="showSection('.moreHandmade')" href="#">Read More</a>
+    </div>
 
+    <div class="section moreHandmade">
+        <h1>Handmade vs. Cast Jewellery (2/2)</h1>
+        <div>
             Are there any drawbacks associated with casting? The age-old method of
             lost-wax casting was perfected and adopted in the jewellery industry
             in the early 20th century. The intent was to increase output and
