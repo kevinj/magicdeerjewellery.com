@@ -2,15 +2,15 @@
 <script>var img = new Image; img.src="[% rollover %]";</script>
 
 [% UNLESS image.nolink %]
-<a name="[% image.name %]" class="rollover" class="navButton" href="[% href || '#' %]">
+<a name="[% image.name %]" class="navButton" href="[% href || '#' %]">
 [% END %]
 
 [% IF selected %]
 <img src="images/[% image.name %]_hover.[% image.type %]" />
 [% ELSE %]
 <img src="images/[% image.name %].[% image.type %]"
-     class="[% image.class %]"
-     showSection="[% image.showSection %]"
+     class="rollover"
+     section="[% image.section %]"
      name="[% image.name %]"/>
 [% END %]
 

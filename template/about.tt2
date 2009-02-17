@@ -2,11 +2,11 @@
     name="about"
     title="About Magic Deer Jewellery"
     imgs=[[
-            { name => 'about1', class => 'luxury', showSection => 1 },
-            { name => 'about2', class => 'design', showSection => 1 }
+            { name => 'about1', section => 'luxury' },
+            { name => 'about2', section => 'design' }
         ], [
-            { name => 'about3', class => 'quality', showSection => 1 },
-            { name => 'about4', class => 'approach', showSection => 1 }
+            { name => 'about3', section => 'quality' },
+            { name => 'about4', section => 'approach' }
         ]
     ]
 %]
@@ -27,7 +27,7 @@
             not a retailer on commission. Magic Deer Jewellery - luxury
             you can afford!
         </p>
-        <a class="more" onclick="showSection('.design')" href="#">Read More</a>
+        <a class="more" onclick="showSection('design')" href="#">Read More</a>
     </div>
 
     <div class="section design">
@@ -45,7 +45,7 @@
             jewellery that will give you lasting pleasure. Do you have your own
             design ideas? We can make it happen.
         </p>
-        <a class="more" onclick="showSection('.quality')" href="#">Read More</a>
+        <a class="more" onclick="showSection('quality')" href="#">Read More</a>
     </div>
 
     <div class="section quality">
@@ -63,7 +63,7 @@
             top-notch, hand-crafted, custom jewellery or the simplest repair, we
             always provide superior quality.
         </p>
-        <a class="more" onclick="showSection('.approach')" href="#">Read More</a>
+        <a class="more" onclick="showSection('approach')" href="#">Read More</a>
     </div>
 
     <div class="section approach">
@@ -80,10 +80,10 @@
             difference between a stunning piece and a bargain in the showcase;
             this is the difference between us and a shopping mall.
         </p>
-        <a class="more" onclick="showSection('.luxury')" href="#">Read More</a>
+        <a class="more" onclick="showSection('luxury')" href="#">Read More</a>
     </div>
 
     <script>
-        $(function (){ showSection('.luxury', true) });
+        $(function (){ showSection('luxury', true) });
     </script>
 [% END %]

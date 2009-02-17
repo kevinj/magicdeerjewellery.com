@@ -1,24 +1,28 @@
-function fadeToSection (sel) {
+function fadeToSection (section) {
     if (jQuery('.section:visible').size()) {
         jQuery('.section:visible').fadeOut(function () {
-            jQuery('div'+sel).fadeIn();
+            jQuery('div.'+section).fadeIn();
         });
     }
     else {
-        jQuery('div'+sel).fadeIn();
+        jQuery('div.'+section).fadeIn();
     }
 }
-function showSection (sel, nofade) {
-    if ($('img'+sel).size()) {
-        $('img'+sel).click();
-    }
-    else {
-        fadeToSection(sel);
+function showSection (section, nofade) {
+    var shown = false;
+    $('img.rollover').each(function () {
+        if ($(this).attr('section') == section) {
+            $(this).click();
+            shown = true;
+        }
+    });
+    if (!shown) {
+        fadeToSection(section);
     }
 }
 
 function setPage (page) {
-    jQuery('.rollover img').each(function (){
+    jQuery('img.rollover').each(function (){
         var $this = $(this);
         var name = $this.attr('name')
                         .replace(/^gallery\d/, 'gallery' + page)
@@ -27,7 +31,7 @@ function setPage (page) {
     });
 }
 $(function () {
-    $('.rollover img')
+    $('img.rollover')
         .mouseover(function (){
             var type = this.src.replace(/.*\./, '');
             var name = $(this).attr('name') + '_hover';
@@ -40,10 +44,11 @@ $(function () {
             this.src = 'images/' + name + '.' + type;
         })
         .click(function (){
-            $('.rollover img').attr('selected', '').mouseout();
+            $('img.rollover').attr('selected', '').mouseout();
             $(this).attr('selected', true).mouseover();
-            if ($(this).attr('showSection')) {
-                fadeToSection('.' + this.className);
+            var section = $(this).attr('section');
+            if (section) {
+                fadeToSection('.' + section);
             }
         });
 });

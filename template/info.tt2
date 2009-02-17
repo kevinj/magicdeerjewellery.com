@@ -2,13 +2,13 @@
     name="info"
     title=""
     imgs=[[
-            {name => 'info1', type => 'png', class => 'goldsmithing', showSection => 1},
-            {name => 'info2', type => 'png', class => 'fineJewellery', showSection => 1},
-            {name => 'info3', type => 'png', class => 'metals', showSection => 1 }
+            {name => 'info1', type => 'png', section => 'goldsmithing'},
+            {name => 'info2', type => 'png', section => 'fineJewellery'},
+            {name => 'info3', type => 'png', section => 'metals' }
         ], [
-            {name => 'info4', type => 'png', class => 'gemstones', showSection => 1 },
-            {name => 'info5', type => 'png', class => 'handmade', showSection => 1},
-            {name => 'info6', type => 'png', class => 'care', showSection => 1}
+            {name => 'info4', type => 'png', section => 'gemstones' },
+            {name => 'info5', type => 'png', section => 'handmade'},
+            {name => 'info6', type => 'png', section => 'care'}
     ]]
 %]
     <div class="section goldsmithing">
@@ -32,7 +32,7 @@
             practice as jewellers, unfortunately they have been loosing their
             leading role, replaced by cheaper alternatives of lower quality.
         </div>
-        <a class="more" onclick="showSection('.fineJewellery')" href="#">Read More</a>
+        <a class="more" onclick="showSection('fineJewellery')" href="#">Read More</a>
     </div>
 
     <div class="section fineJewellery">
@@ -54,7 +54,7 @@
             more expensive metals, like platinum and higher quality and/or larger
             gems.
         </div>
-        <a class="more" onclick="showSection('.metals')" href="#">Read More</a>
+        <a class="more" onclick="showSection('metals')" href="#">Read More</a>
     </div>
 
     <div class="section metals">
@@ -74,7 +74,7 @@
             quantity the natural color of gold can turn yellowish, pinkish or
             white.
         </div>
-        <a class="more" onclick="showSection('.gemstones')" href="#">Read More</a>
+        <a class="more" onclick="showSection('gemstones')" href="#">Read More</a>
     </div>
 
     <div class="section gemstones">
@@ -92,7 +92,7 @@
             availability, color, clarity, cut and weight therefore, their
             price-range is very wide.
         </div>
-        <a class="more" onclick="showSection('.handmade')" href="#">Read More</a>
+        <a class="more" onclick="showSection('handmade')" href="#">Read More</a>
     </div>
 
     <div class="section handmade">
@@ -119,7 +119,7 @@
             Especially, when the wax pieces can be cast with the gemstones already
             set in them.
         </div>
-        <a class="more" onclick="showSection('.moreHandmade')" href="#">Read More</a>
+        <a class="more" onclick="showSection('moreHandmade')" href="#">Read More</a>
     </div>
 
     <div class="section moreHandmade">
@@ -146,7 +146,7 @@
             the manufacturing process often result in poorly made jewellery that
             should not be for sale in stores.
         </div>
-        <a class="more" onclick="showSection('.care')" href="#">Read More</a>
+        <a class="more" onclick="showSection('care')" href="#">Read More</a>
     </div>
 
     <div class="section care">
@@ -166,10 +166,10 @@
             polished regularly to restore its lustre. For repair and maintenance
             one should always trust a qualified and experienced goldsmith.
         </div>
-        <a class="more" onclick="showSection('.goldsmithing')" href="#">Read More</a>
+        <a class="more" onclick="showSection('goldsmithing')" href="#">Read More</a>
     </div>
 
     <script>
-        $(function (){ showSection('.goldsmithing', true) });
+        $(function (){ showSection('goldsmithing', true) });
     </script>
 [% END %]
