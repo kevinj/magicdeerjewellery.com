@@ -2,13 +2,13 @@
     name="info"
     title=""
     imgs=[[
-            {name => 'info1', type => 'png', onclick => "showSection('.goldsmithing')"},
-            {name => 'info2', type => 'png', onclick => "showSection('.fineJewellery')"},
-            {name => 'info3', type => 'png', onclick => "showSection('.metals')" }
+            {name => 'info1', type => 'png', class => 'goldsmithing', showSection => 1},
+            {name => 'info2', type => 'png', class => 'fineJewellery', showSection => 1},
+            {name => 'info3', type => 'png', class => 'metals', showSection => 1 }
         ], [
-            {name => 'info4', type => 'png', onclick => "showSection('.gemstones')" },
-            {name => 'info5', type => 'png', onclick => "showSection('.handmade')"},
-            {name => 'info6', type => 'png', onclick => "showSection('.care')"}
+            {name => 'info4', type => 'png', class => 'gemstones', showSection => 1 },
+            {name => 'info5', type => 'png', class => 'handmade', showSection => 1},
+            {name => 'info6', type => 'png', class => 'care', showSection => 1}
     ]]
 %]
     <div class="section goldsmithing">
@@ -170,7 +170,6 @@
     </div>
 
     <script>
-        jQuery('.section').hide();
-        jQuery('.section:first').show();
+        $(function (){ showSection('.goldsmithing', true) });
     </script>
 [% END %]

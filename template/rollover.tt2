@@ -9,11 +9,9 @@
 <img src="images/[% image.name %]_hover.[% image.type %]" />
 [% ELSE %]
 <img src="images/[% image.name %].[% image.type %]"
-    name="[% image.name %]"
-    onmouseover="this.src='images/' + $(this).attr('name') + '_hover.[% image.type %]'"
-    onmouseout="this.src='images/' + $(this).attr('name') + '.[% image.type %]'"
-    [% IF image.onclick %]onclick="[% image.onclick %]"[% END %]
-    />
+     class="[% image.class %]"
+     showSection="[% image.showSection %]"
+     name="[% image.name %]"/>
 [% END %]
 
 [% UNLESS image.nolink %]
