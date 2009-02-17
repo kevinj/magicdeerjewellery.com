@@ -32,6 +32,7 @@
             practice as jewellers, unfortunately they have been loosing their
             leading role, replaced by cheaper alternatives of lower quality.
         </div>
+        <a class="more" onclick="showSection('.fineJewellery')" href="#">Read More</a>
     </div>
 
     <div class="section fineJewellery">
@@ -53,6 +54,7 @@
             more expensive metals, like platinum and higher quality and/or larger
             gems.
         </div>
+        <a class="more" onclick="showSection('.metals')" href="#">Read More</a>
     </div>
 
     <div class="section metals">
@@ -72,6 +74,7 @@
             quantity the natural color of gold can turn yellowish, pinkish or
             white.
         </div>
+        <a class="more" onclick="showSection('.gemstones')" href="#">Read More</a>
     </div>
 
     <div class="section gemstones">
@@ -89,6 +92,7 @@
             availability, color, clarity, cut and weight therefore, their
             price-range is very wide.
         </div>
+        <a class="more" onclick="showSection('.handmade')" href="#">Read More</a>
     </div>
 
     <div class="section handmade">
@@ -142,6 +146,7 @@
             the manufacturing process often result in poorly made jewellery that
             should not be for sale in stores.
         </div>
+        <a class="more" onclick="showSection('.care')" href="#">Read More</a>
     </div>
 
     <div class="section care">
@@ -161,6 +166,7 @@
             polished regularly to restore its lustre. For repair and maintenance
             one should always trust a qualified and experienced goldsmith.
         </div>
+        <a class="more" onclick="showSection('.goldsmithing')" href="#">Read More</a>
     </div>
 
     <script>
