@@ -31,6 +31,18 @@ body {
     color: #8d8d8d;
 }
 
+.wrapper {
+    text-align: center;
+}
+
+.phone {
+    font-size: 9pt;
+    float: right;
+    margin-right: 20px;
+    margin-top: -20px;
+    color: 660000;
+}
+
 a.more {
     float: right;
     color: #8d8d8d;

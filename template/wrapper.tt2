@@ -14,7 +14,8 @@
 [% last = left > right ? left : right %]
 
 <div class="wrapper">
-    <img src="images/header.jpg"/>
+    <img class="header" src="images/header.png"/>
+    <div class="phone">T: 778-318-0624</div>
     <div class="content">
         <table class="main">
             <tr>
