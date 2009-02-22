@@ -2,13 +2,13 @@
     name="info"
     title=""
     imgs=[[
-            {name => 'info1', type => 'png', section => 'goldsmithing'},
-            {name => 'info2', type => 'png', section => 'fineJewellery'},
-            {name => 'info3', type => 'png', section => 'metals' }
+            {name => 'info1', section => 'goldsmithing'},
+            {name => 'info2', section => 'fineJewellery'},
+            {name => 'info3', section => 'metals' }
         ], [
-            {name => 'info4', type => 'png', section => 'gemstones' },
-            {name => 'info5', type => 'png', section => 'handmade'},
-            {name => 'info6', type => 'png', section => 'care'}
+            {name => 'info4', section => 'gemstones' },
+            {name => 'info5', section => 'handmade'},
+            {name => 'info6', section => 'care'}
     ]]
 %]
     <div class="section goldsmithing">

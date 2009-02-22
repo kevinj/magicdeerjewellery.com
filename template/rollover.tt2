@@ -1,4 +1,3 @@
-[% UNLESS image.type; image.type = 'jpg'; END %]
 <script>var img = new Image; img.src="[% rollover %]";</script>
 
 [% UNLESS image.nolink %]
@@ -6,9 +5,9 @@
 [% END %]
 
 [% IF selected %]
-<img src="images/[% image.name %]_hover.[% image.type %]" />
+<img src="images/[% image.name %]_hover.png" />
 [% ELSE %]
-<img src="images/[% image.name %].[% image.type %]"
+<img src="images/[% image.name %].png"
      class="rollover"
      section="[% image.section %]"
      name="[% image.name %]"/>
