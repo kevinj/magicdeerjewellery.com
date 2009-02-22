@@ -4,6 +4,10 @@ body, p, td, div {
     font-family: tahoma, verdana, arial, helvetica, sans-serif;
 }
 
+body a {
+    color: #8d8d8d;
+}
+
 h1 {
     font-size: 11pt;
     font-weight: bold;
@@ -48,9 +52,6 @@ a.more {
     color: #8d8d8d;
 }
 
-.pages a {
-    color: #8d8d8d;
-}
 .content {
     margin: 0 20px;
     height: 413px;
@@ -92,10 +93,6 @@ td.middle {
     display: none;
 }
 
-.pages {
-    text-align: center;
-}
-
 img { border: 0 }
 
 .wrapper {
@@ -112,9 +109,6 @@ img { border: 0 }
     text-align: center;
 }
 
-.more a {
-}
-
 .caption {
     text-align: center;
 }
@@ -124,3 +118,4 @@ img { border: 0 }
     padding: 0;
     margin: 0;
 }
+
