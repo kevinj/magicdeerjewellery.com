@@ -1,16 +1,19 @@
+^ Small Tasks
 * Make the telephone number text and align with grey
-* Convert images to PNG and make the background transparent
 * Don't fade out on click on the gallery
-* Look into the email form
-* About us
-** Make the selected link selected
-** Add "Read More" links
-* Gallery
-** Make the selected link selected
-** Make the gallery link a context menu
-** Add description
-** Changing pages on the gallery should change the big photo
-* Info
-** Incorporate the images from Tibi and make it more like "Home"
-* Contact
-** Make the contact link spam-proof
+* Contact: Make the contact link spam-proof
+
+^ Medium Tasks
+* Convert images to PNG and make the background transparent
+* Gallery: Add description
+* Gallery: Changing pages on the gallery should change the big photo
+
+^ Large Tasks
+
+* Gallery: Make the gallery link a context menu
+
+^ Done
+* -About us: Make the selected link selected-
+* -About us: Add "Read More" links-
+* -Gallery: Make the selected link selected-
+* -Info: Incorporate the images from Tibi and make it more like "Home"-
