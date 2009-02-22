@@ -1,7 +1,4 @@
 ^ Small Tasks
-* Make the telephone number text and align with grey
-* Don't fade out on click on the gallery
-* Contact: Make the contact link spam-proof
 
 ^ Medium Tasks
 * Convert images to PNG and make the background transparent
@@ -17,3 +14,6 @@
 * -About us: Add "Read More" links-
 * -Gallery: Make the selected link selected-
 * -Info: Incorporate the images from Tibi and make it more like "Home"-
+* -Make the telephone number text and align with grey-
+* -Don't fade out on click on the gallery-
+* -Contact: Make the contact link spam-proof-
