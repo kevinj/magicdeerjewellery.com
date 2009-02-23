@@ -1,4 +1,6 @@
 .*.swp
+.pass
+make-time
 home.html
 about1.html
 contact.html
@@ -10,3 +12,4 @@ gallery3.html
 about.html
 gallery.html
 index.html
+construction.html

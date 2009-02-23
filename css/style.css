@@ -145,6 +145,10 @@ img { border: 0 }
     padding: 0;
 }
 
+ul.menu a img {
+    padding: 20px 0;
+}
+
 ul.menu {
     height: 50px;
     margin: 0 20px;
@@ -169,7 +173,7 @@ li.submenu ul {
     display: none;
     position: absolute;
     left: -15px;
-    bottom: 50px;
+    bottom: 70px;
     background-color: #d1d1d1;
     padding: 0px 0;
 }
@@ -179,6 +183,10 @@ li.submenu ul li {
     width: 80px;
     margin: 0 5px;
     float: none;
+}
+
+li.submenu ul li img {
+    padding: 0;
 }
 
 li.submenu:hover ul {

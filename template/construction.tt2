@@ -1,0 +1,3 @@
+[% WRAPPER wrapper.tt2 name="construction" title="" nolinks=1 %]
+    This site is currently being updated. Please wait a minute and try again.
+[% END %]

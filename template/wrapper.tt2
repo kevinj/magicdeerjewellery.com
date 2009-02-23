@@ -14,7 +14,7 @@
 [% last = left > right ? left : right %]
 
 <div class="wrapper">
-    <img class="header" src="images/header.png"/>
+    <img class="header" src="images/header.png?_=[% time %]"/>
     <div class="phone">T: 778-318-0624</div>
     <div class="content">
         <table class="main">
@@ -43,6 +43,7 @@
         </table>
     </div>
 
+    [% UNLESS nolinks %]
     [% MACRO selected(link) 1 IF link == name %]
     <ul class="menu">
         <li>
@@ -103,5 +104,6 @@
             %]
         </li>
     </ul>
+    [% END %]
 </body>
 </html>

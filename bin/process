@@ -5,8 +5,10 @@ use warnings;
 use Template;
 
 my $name = shift || die "USAGE: $0 <name>\n";
+open my $fh, 'make-time' or die "make-time doesn't exist!";
+my $time = <$fh>;
 
 my $tt2 = Template->new({
     INCLUDE_PATH => 'template',
 });
-$tt2->process("$name.tt2", {}, "$name.html") or die $tt2->error;
+$tt2->process("$name.tt2", { 'time' => $time }, "$name.html") or die $tt2->error;
