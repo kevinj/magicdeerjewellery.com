@@ -1,13 +1,16 @@
+var SHOWING = 0;
 function fadeToSection (section) {
+    if (SHOWING++) return;
     if (jQuery('.section:visible').size()) {
         jQuery('.section:visible').fadeOut(function () {
-            jQuery('div.'+section).fadeIn();
+            jQuery('div.'+section).fadeIn(function () { SHOWING = 0 });
         });
     }
     else {
-        jQuery('div.'+section).fadeIn();
+        jQuery('div.'+section).fadeIn(function () { SHOWING = 0 });
     }
 }
+
 function showSection (section, nofade) {
     var shown = false;
     $('img.rollover').each(function () {
@@ -44,10 +47,12 @@ $(function () {
             this.src = 'images/' + name + '.' + type;
         })
         .click(function (){
-            $('img.rollover').attr('selected', '').mouseout();
-            $(this).attr('selected', true).mouseover();
             var section = $(this).attr('section');
             if (section) {
+                if (!SHOWING) {
+                    $('img.rollover').attr('selected', '').mouseout();
+                    $(this).attr('selected', true).mouseover();
+                }
                 fadeToSection('.' + section);
             }
         });

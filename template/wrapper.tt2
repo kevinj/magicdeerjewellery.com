@@ -23,7 +23,7 @@
                     [% INCLUDE rollover.tt2 image=imgs.0.0 IF imgs.0.0 %]
                 </td>
                 <td rowspan="[% last %]">
-                <div class="centre">[% content %]</div>
+                    [% content %]
                 </td>
                 <td class="top right">
                     [% INCLUDE rollover.tt2 image=imgs.1.0 IF imgs.1.0 %]
@@ -32,10 +32,10 @@
             [% last = last - 1 %]
             [% FOR i = [1 .. last] %]
             <tr>
-                <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
+                <td class="left [% IF i < last %]middle[% ELSE %]bottom[% END %]">
                     [% INCLUDE rollover.tt2 image=imgs.0.$i IF imgs.0.$i %]
                 </td>
-                <td class="[% IF i < last %]middle[% ELSE %]bottom[% END %]">
+                <td class="right [% IF i < last %]middle[% ELSE %]bottom[% END %]">
                     [% INCLUDE rollover.tt2 image=imgs.1.$i IF imgs.1.$i %]
                 </td>
             </tr>
