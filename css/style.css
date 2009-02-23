@@ -9,8 +9,10 @@ body {
     color: #8d8d8d;
 }
 
-body a {
+body a, body a:visited, body a:active {
     color: #8d8d8d;
+    outline: 0;
+    -moz-outline-style: none;
 }
 
 h1 {
