@@ -1,1 +1,35 @@
+[% images = [
+        {
+            name => "gallery2_1", section => "gallery2_1",
+            desc => '19 KARAT WHITE GOLD RING WITH TOURMALINE AND DIAMONDS'
+        },
+        {
+            name => "gallery2_2", section => "gallery2_2",
+            desc => '19 KARAT WHITE GOLD PENDANT WITH DIAMOND'
+        },
+        {
+            name => "gallery2_3", section => "gallery2_3",
+            desc => '19 KARAT WHITE GOLD ENGAGEMENT RING WITH DIAMOND'
+        },
+        {
+            name => "gallery2_4", section => "gallery2_4",
+            desc => '19 KARAT WHITE GOLD AND 18 KARAT YELLOW GOLD WEDDING BAND'
+        },
+        {
+            name => "gallery2_5", section => "gallery2_5",
+            desc => '19 KARAT WHITE GOLD AND 18 KARAT YELLOW GOLD WEDDING BAND'
+        },
+        {
+            name => "gallery2_6", section => "gallery2_6",
+            desc => '19 KARAT WHITE GOLD ENGAGEMENT RING WITH DIAMOND'
+        },
+        {
+            name => "gallery2_7", section => "gallery2_7",
+            desc => 'STERLING SILVER BOLO TIE WITH TURQUOISE AND TIGER-EYE'
+        },
+        {
+            name => "gallery2_8", section => "gallery2_8",
+            desc => '19 KARAT WHITE GOLD EARRINGS WITH PINK JADE, BLUE TOPAZ AND DIAMONDS'
+        }
+] %]
 [% INCLUDE gallery.tt2 page=2 %]

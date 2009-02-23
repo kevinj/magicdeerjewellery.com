@@ -1,1 +1,35 @@
+[% images = [
+        {
+            name => "gallery3_1", section => "gallery3_1",
+            desc => '19 KARAT WHITE GOLD WEDDING BANDS'
+        },
+        {
+            name => "gallery3_2", section => "gallery3_2",
+            desc => '19 KARAT WHITE GOLD AND 18 KARAT YELLOW GOLD RING WITH TOURMALINE AND DIAMONDS'
+        },
+        {
+            name => "gallery3_3", section => "gallery3_3",
+            desc => '19 KARAT WHITE GOLD PENDANT WITH DIAMONDS'
+        },
+        {
+            name => "gallery3_4", section => "gallery3_4",
+            desc => '19 KARAT WHITE GOLD WEDDING BANDS WITH DIAMONDS'
+        },
+        {
+            name => "gallery3_5", section => "gallery3_5",
+            desc => '19 KARAT WHITE GOLD AND 18 KARAT YELLOW GOLD RING WITH GARNET AND DIAMONDS'
+        },
+        {
+            name => "gallery3_6", section => "gallery3_6",
+            desc => '19 KARAT WHITE GOLD AND 18 KARAT YELLOW GOLD RING WITH SAPPHIRE AND DIAMONDS'
+        },
+        {
+            name => "gallery3_7", section => "gallery3_7",
+            desc => '18 KARAT YELLOW GOLD RING WITH GARNET'
+        },
+        {
+            name => "gallery3_8", section => "gallery3_8",
+            desc => '19 KARAT WHITE GOLD WEDDING BAND'
+        }
+] %]
 [% INCLUDE gallery.tt2 page=3 %]

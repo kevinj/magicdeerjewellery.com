@@ -128,3 +128,15 @@ img { border: 0 }
     margin: 0;
 }
 
+.gallery {
+    width: 437px;
+    height: 382px;
+    text-align: center;
+}
+
+.gallery h1 {
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
