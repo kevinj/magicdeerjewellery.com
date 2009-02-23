@@ -9,7 +9,7 @@
     <div class="gallery">
         [% FOR img = images %]
             <div class="section [% img.name %]">
-                <img class="target" src="images/[% img.name %]_big.png?_=[% time %]"/>
+                <img class="target" src="images/[% img.name %]_big.jpg?_=[% time %]"/>
                 <div class="description"><h1>[% img.desc %]</h1></div>
             </div>
         [% END %]
