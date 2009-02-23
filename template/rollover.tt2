@@ -1,4 +1,4 @@
-<script>var img = new Image; img.src="[% rollover %]";</script>
+<script>var img = new Image; img.src="images/[% image.name %]_hover.png?_=[% time %]"</script>
 
 [% UNLESS image.nolink %]
 <a name="[% image.name %]" class="navButton" href="[% href || '#' %]">
