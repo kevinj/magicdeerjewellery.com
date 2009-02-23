@@ -192,3 +192,24 @@ li.submenu ul li img {
 li.submenu:hover ul {
     display: block
 }
+
+/* Image sizes */
+body#gallery .main img.rollover {
+    height: 90px;
+    width: 120px;
+}
+
+body#gallery .section img.target {
+    width: 400px;
+    height: 360px;
+}
+
+body#testimonial .main img.rollover {
+    height: 114px;
+    width: 169px;
+}
+
+body#testimonial .section {
+    height: 362px;
+    width: 344px;
+}
