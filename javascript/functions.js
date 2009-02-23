@@ -24,15 +24,6 @@ function showSection (section, nofade) {
     }
 }
 
-function setPage (page) {
-    jQuery('img.rollover').each(function (){
-        var $this = $(this);
-        var name = $this.attr('name')
-                        .replace(/^gallery\d/, 'gallery' + page)
-        $this.attr('name', name);
-        $this.mouseout();
-    });
-}
 $(function () {
     $('img.rollover')
         .mouseover(function (){
@@ -50,7 +41,7 @@ $(function () {
             var section = $(this).attr('section');
             if (section) {
                 if (!SHOWING) {
-                    $('img.rollover').attr('selected', '').mouseout();
+                    $('.main img.rollover').attr('selected', '').mouseout();
                     $(this).attr('selected', true).mouseover();
                 }
                 fadeToSection('.' + section);

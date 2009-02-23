@@ -43,16 +43,65 @@
         </table>
     </div>
 
-    <table border="0" cellpadding="0" cellspacing="0" class="links">
-        <tr>
-            [% MACRO selected(link) 1 IF link == name %]
-            <td>[% INCLUDE rollover.tt2 selected=selected('home') image={name=>"link_home"} href="/" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('about') image={name=>"link_about"} href="about.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('contact') image={name=>"link_contact"} href="contact.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('gallery') image={name=>"link_gallery"} href="gallery1.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('testimonial') image={name=>"link_testimonial"} href="testimonials.html" %]</td>
-            <td>[% INCLUDE rollover.tt2 selected=selected('info') image={name=>"link_info"} href="info.html" %]</td>
-        </tr>
-    </table>
+    [% MACRO selected(link) 1 IF link == name %]
+    <ul class="menu">
+        <li>
+            [% INCLUDE rollover.tt2 href="/"
+                image = {
+                    selected => selected('home'),
+                    name => "link_home"
+                }
+            %]
+        </li>
+        <li>
+            [% INCLUDE rollover.tt2 href="about.html"
+                image = {
+                    selected => selected('about'),
+                    name=>"link_about"
+                }
+            %]
+        </li>
+        <li>
+            [% INCLUDE rollover.tt2 href="contact.html"
+                image = {
+                    selected => selected('contact'),
+                    name => "link_contact"
+                }
+            %]
+        </li>
+        <li class="submenu">
+            [% INCLUDE rollover.tt2 href="gallery1.html"
+                image = {
+                    selected => selected('gallery'),
+                    name => "link_gallery"
+                }
+            %]
+            <ul>
+                [% FOR page = [1,2,3] %]
+                <li>
+                    [% INCLUDE rollover.tt2 href="gallery${page}.html"
+                        image = { name=>"link_gallery${page}"}
+                    %]
+                </li>
+                [% END %]
+            </ul>
+        </li>
+        <li>
+            [% INCLUDE rollover.tt2 href="testimonials.html"
+                image = {
+                    selected => selected('testimonial'),
+                    name => "link_testimonial"
+                }
+            %]
+        </li>
+        <li>
+            [% INCLUDE rollover.tt2 href="info.html"
+                image = {
+                    selected => selected('info'),
+                    name => "link_info"
+                }
+            %]
+        </li>
+    </ul>
 </body>
 </html>

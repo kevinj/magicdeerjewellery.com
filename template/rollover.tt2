@@ -4,14 +4,12 @@
 <a name="[% image.name %]" class="navButton" href="[% href || '#' %]">
 [% END %]
 
-[% IF selected %]
-<img src="images/[% image.name %]_hover.png" />
-[% ELSE %]
-<img src="images/[% image.name %].png"
+<img src="images/[% image.name %][% '_hover' IF image.selected %].png"
      class="rollover"
+     selected="[% image.selected %]"
+     menu="[% image.menu %]"
      section="[% image.section %]"
      name="[% image.name %]"/>
-[% END %]
 
 [% UNLESS image.nolink %]
 </a>
