@@ -10,7 +10,7 @@
         [% FOR img = images %]
             <div class="section [% img.name %]">
                 <img class="target" src="images/[% img.name %]_big.png"/>
-                <h1 class="description">[% img.desc %]</h1>
+                <div class="description"><h1>[% img.desc %]</h1></div>
             </div>
         [% END %]
     </div>

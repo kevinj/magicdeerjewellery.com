@@ -139,11 +139,17 @@ img { border: 0 }
     text-align: center;
 }
 
-.gallery h1.description {
+.gallery .description {
+    margin: 8px 0;
+    text-align: center;
+    vertical-align: middle;
+    height: 35px;
+}
+
+.gallery .description h1 {
     font-size: 9pt;
-    font-weight: bold;
+    font-weight: normal;
+    vertical-align: middle;
     margin: 0;
     padding: 0;
-    width: 434px;
-    text-align: center;
 }
