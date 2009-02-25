@@ -1,5 +1,6 @@
 .*.swp
 .pass
+.identifiers
 make-time
 home.html
 about1.html
