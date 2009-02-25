@@ -16,7 +16,7 @@ clean:
 	@grep $@ .gitignore >/dev/null || echo $@ >> .gitignore && :
 
 upload-construction: construction.html
-	mkdir construction;
+	[ -d construction ] || mkdir construction;
 	for file in $(HTML); do \
 	    cp construction.html construction/$$file; \
 	done;

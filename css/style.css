@@ -10,6 +10,10 @@ body {
     color: #8d8d8d;
 }
 
+* html body {
+    behavior: url(csshover.htc);
+}
+
 body a, body a:visited, body a:active {
     color: #8d8d8d;
     outline: 0;
@@ -192,10 +196,14 @@ li.submenu ul {
     list-style-type:none;
     display: none;
     position: absolute;
-    left: -15px;
+    left: -53px;
     bottom: 50px;
     background-color: #d1d1d1;
     padding: 0px 0;
+}
+
+html>body li.submenu ul {
+    left: -15px;
 }
 
 li.submenu ul li {
@@ -209,7 +217,7 @@ li.submenu ul li img {
     padding: 0;
 }
 
-li.submenu:hover ul {
+li.submenu:hover ul, li.submenu.hover ul {
     display: block
 }
 

@@ -48,4 +48,27 @@ $(function () {
             }
             return $(this).attr('href') == '#' ? false : true;
         });
+
+        /* Hack around IE which doesn't support li:hover.
+         * add a class "hover" on mouse over and remove it
+         * on mouse out so that we can use the same css
+         * classes to control the visibilty of submenus
+         */
+        if (document.all && document.getElementById) {
+            jQuery('li')
+                .mouseover(function() {
+                    this.over = true;
+                    $(this).addClass('hover');
+                })
+                .mouseout(function() {
+                    this.over = false;
+                    var self = this;
+                    setTimeout(function() {
+                        if (!self.over) {
+                            $(self).removeClass('hover');
+                        }
+                    },300);
+                });
+        }
+
 });
