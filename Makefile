@@ -6,13 +6,10 @@ OTHER_TEMPLATES=template/wrapper.tt2 template/rollover.tt2 template/gallery.tt2 
 TEMPLATES=$(filter-out $(OTHER_TEMPLATES),$(ALL_TEMPLATES))
 HTML=$(TEMPLATES:template/%.tt2=%.html)
 
-all: make-time $(HTML)
+all: $(HTML)
 
 clean:
-	rm $(HTML) make-time
-
-make-time: $(ALL_TEMPLATES)
-	perl -le 'print time' > $@
+	rm $(HTML)
 
 %.html: $(OTHER_TEMPLATES) template/%.tt2
 	$(PERL) bin/process $(@:%.html=%) $(TIME)

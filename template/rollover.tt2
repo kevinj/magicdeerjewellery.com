@@ -1,13 +1,14 @@
-<script>var img = new Image; img.src="[% cache("images/${image.name}_hover.png") %]"</script>
+[% type = image.type || 'png' %]
+<script>var img = new Image; img.src="[% cache("images/${image.name}_hover.$type") %]"</script>
 
 [% UNLESS image.nolink %]
 <a name="[% image.name %]" class="navButton" href="[% href || '#' %]">
 [% END %]
 
 [% IF image.selected;
-    file = cache("images/${image.name}_hover.png");
+    file = cache("images/${image.name}_hover.$type");
   ELSE;
-    file = cache("images/${image.name}.png");
+    file = cache("images/${image.name}.$type");
   END
 %]
 

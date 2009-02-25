@@ -69,6 +69,7 @@
                 image = {
                     selected => selected('contact'),
                     name => "link_contact"
+
                 }
             %]
         </li>
@@ -77,13 +78,17 @@
                 image = {
                     selected => selected('gallery'),
                     name => "link_gallery"
+
                 }
             %]
             <ul>
                 [% FOR page = [1,2,3] %]
                 <li>
                     [% INCLUDE rollover.tt2 href="gallery${page}.html"
-                        image = { name=>"link_gallery${page}"}
+                        image = {
+                            name=>"link_gallery${page}"
+                        }
+
                     %]
                 </li>
                 [% END %]

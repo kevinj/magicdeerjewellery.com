@@ -27,15 +27,15 @@ function showSection (section, nofade) {
 $(function () {
     $('img.rollover')
         .mouseover(function (){
-            var type = this.src.replace(/.*\./, '');
-            var name = $(this).attr('name') + '_hover';
-            this.src = 'images/' + name + '.' + type;
+            var name = $(this).attr('name');
+            if (this.src.match(/_hover/)) return;
+            this.src = this.src.replace(RegExp(name), name + '_hover');
         })
         .mouseout(function (){
-            var type = this.src.replace(/.*\./, '');
+            if ($(this).attr('selected')) return;
+            if (!this.src.match(/_hover/)) return;
             var name = $(this).attr('name');
-            if ($(this).attr('selected')) name += '_hover';
-            this.src = 'images/' + name + '.' + type;
+            this.src = this.src.replace(RegExp(name + '_hover'), name);
         })
         .click(function (){
             var section = $(this).attr('section');
