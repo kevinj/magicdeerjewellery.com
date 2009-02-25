@@ -9,7 +9,11 @@ open my $fh, 'make-time' or die "make-time doesn't exist!";
 my $time = <$fh>;
 chomp $time;
 
+my $vars = {
+    cache => sub { $_[0] . '?_=' . (stat($_[0]))[9] }
+};
+
 my $tt2 = Template->new({
     INCLUDE_PATH => 'template',
 });
-$tt2->process("$name.tt2", { 'time' => $time }, "$name.html") or die $tt2->error;
+$tt2->process("$name.tt2", $vars, "$name.html") or die $tt2->error;

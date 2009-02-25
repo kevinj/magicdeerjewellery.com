@@ -1,10 +1,17 @@
-<script>var img = new Image; img.src="images/[% image.name %]_hover.png?_=[% time %]"</script>
+<script>var img = new Image; img.src="[% cache("images/${image.name}_hover.png") %]"</script>
 
 [% UNLESS image.nolink %]
 <a name="[% image.name %]" class="navButton" href="[% href || '#' %]">
 [% END %]
 
-<img src="images/[% image.name %][% '_hover' IF image.selected %].png?_=[% time %]"
+[% IF image.selected;
+    file = cache("images/${image.name}_hover.png");
+  ELSE;
+    file = cache("images/${image.name}.png");
+  END
+%]
+
+<img src="[% file %]"
      class="rollover"
      selected="[% image.selected %]"
      menu="[% image.menu %]"

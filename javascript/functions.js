@@ -46,5 +46,6 @@ $(function () {
                 }
                 fadeToSection('.' + section);
             }
+            return $(this).attr('href') == '#' ? false : true;
         });
 });
