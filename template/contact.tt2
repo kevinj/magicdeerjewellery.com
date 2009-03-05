@@ -7,24 +7,38 @@
         {name => 'contact3', nolink => 1}
     ]]
 %]
-    <h3>Studio location: </h3>
-    Suite 4 - 86 Moody Street <br/>
-    Port Moody, British Columbia<br/>
-    V3H 2P6, Canada<br/>
+    <table id="contactTable">
+      <tr>
+        <td>
+          <h3>Studio location: </h3>
+          Suite 4 - 86 Moody Street <br/>
+          Port Moody, British Columbia<br/>
+          V3H 2P6, Canada<br/>
 
-    <h3>Directions</h3>
-    You find us in the north-eastern corner at the
-    intersection of Moody Street and St. Johns Street.
-    (Second floor in the grey building of the
-    "Great Canadian Card Company")
+          <h3>Directions</h3>
+          You find us in the north-eastern corner at the
+          intersection of Moody Street and St. Johns Street.
+          (Second floor in the grey building of the
+          "Great Canadian Card Company")
+        </td>
+      </tr>
+  
+      <tr>
+        <td>
+          <h3>Telephone</h3>
+          778.318.0624
 
-    <h3>Hours</h3>
-    To best serve you please call ahead for an appointment!
+          <h3>Hours</h3>
+          To best serve you please call ahead for an appointment!
+        </td>
+      </tr>
 
-    <h3>Telephone</h3>
-    778.318.0624
-
-    <h3>Email</h3>
-    <a href='#' id="email"></a>
-    <script>var _0x7d81=["\x69\x6E\x66\x6F\x40\x6D\x61\x67\x69\x63\x64\x65\x65\x72\x6A\x65\x77\x65\x6C\x6C\x65\x72\x79\x2E\x63\x6F\x6D","\x68\x74\x6D\x6C","\x68\x72\x65\x66","\x6D\x61\x69\x6C\x74\x6F\x3A\x69\x6E\x66\x6F\x40\x6D\x61\x67\x69\x63\x64\x65\x65\x72\x6A\x65\x77\x65\x6C\x6C\x65\x72\x79\x2E\x63\x6F\x6D","\x61\x74\x74\x72","\x23\x65\x6D\x61\x69\x6C"];$(_0x7d81[0x5])[_0x7d81[0x4]](_0x7d81[0x2],_0x7d81[0x3])[_0x7d81[0x1]](_0x7d81[0x0]);</script>
+      <tr>
+        <td>
+          <h3>Email</h3>
+          <a href='#' id="email"></a>
+          <script>var _0x7d81=["\x69\x6E\x66\x6F\x40\x6D\x61\x67\x69\x63\x64\x65\x65\x72\x6A\x65\x77\x65\x6C\x6C\x65\x72\x79\x2E\x63\x6F\x6D","\x68\x74\x6D\x6C","\x68\x72\x65\x66","\x6D\x61\x69\x6C\x74\x6F\x3A\x69\x6E\x66\x6F\x40\x6D\x61\x67\x69\x63\x64\x65\x65\x72\x6A\x65\x77\x65\x6C\x6C\x65\x72\x79\x2E\x63\x6F\x6D","\x61\x74\x74\x72","\x23\x65\x6D\x61\x69\x6C"];$(_0x7d81[0x5])[_0x7d81[0x4]](_0x7d81[0x2],_0x7d81[0x3])[_0x7d81[0x1]](_0x7d81[0x0]);</script>
+        </td>
+      </tr>
+    </table>
 [% END %]

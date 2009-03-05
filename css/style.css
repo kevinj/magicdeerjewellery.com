@@ -246,3 +246,12 @@ body#testimonial .section {
     height: 362px;
     width: 344px;
 }
+
+table#contactTable td {
+    height: 128px;
+}
+
+table#contactTable h3 {
+    margin: 0;
+    padding: 0;
+}
