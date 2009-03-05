@@ -1,5 +1,10 @@
 <html>
 <head>
+    <!-- 
+          Copyright (c) Andrea Orosz & Tibor Papp
+          Design: Andrea Orosz & Tibor Papp
+          Developer: Kevin Jones
+      -->
     <title>[% title %]</title>
     <meta http-equiv="Content-Type" content="text/html;">
     <meta name="description" content="FW MX DW MX HTML">
