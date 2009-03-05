@@ -2,17 +2,17 @@
     name="info"
     title=""
     imgs=[[
-            {name => 'info1', section => 'goldsmithing'},
+            {name => 'info1', section => 'goldsmithing1'},
             {name => 'info2', section => 'fineJewellery'},
             {name => 'info3', section => 'metals' }
         ], [
             {name => 'info4', section => 'gemstones' },
-            {name => 'info5', section => 'handmade'},
+            {name => 'info5', section => 'handmade1'},
             {name => 'info6', section => 'care'}
     ]]
 %]
-    <div class="section goldsmithing">
-        <h1>The Ancient Craft of Goldsmithing</h1>
+    <div class="section goldsmithing1">
+        <h1>The Ancient Craft of Goldsmithing (1/2)</h1>
         <div>
             Since the beginning of human history, people have adorned themselves
             with jewellery. Gold has been worked in many cultures. Fine objects
@@ -22,7 +22,13 @@
             social rank and the jeweller's art as a well-respected craft was born.
             In medieval Europe, goldsmiths and silversmiths were skilled artisans
             of high repute, were organised in guilds and started using hallmarks.
+        </div>
+        <a class="more" onclick="showSection('goldsmithing2')" href="#">Read More</a>
+    </div>
 
+    <div class="section goldsmithing2">
+        <h1>The Ancient Craft of Goldsmithing (2/2)</h1>
+        <div>
             The jeweller's trade, amongst many others, was dramatically changed by
             the Industrial Revolution. In the 18th and 19th centuries, with the
             use of mass production jewellery became affordable to almost everyone.
@@ -31,6 +37,8 @@
             experienced goldsmiths have the most extensive knowledge and skills to
             practice as jewellers, unfortunately they have been loosing their
             leading role, replaced by cheaper alternatives of lower quality.
+            For more information on fine jewellery, please visit our blog:
+            <a href="vancouverjewellery.com">vancouverjewellery.com</a>.
         </div>
         <a class="more" onclick="showSection('fineJewellery')" href="#">Read More</a>
     </div>
@@ -92,11 +100,11 @@
             availability, color, clarity, cut and weight therefore, their
             price-range is very wide.
         </div>
-        <a class="more" onclick="showSection('handmade')" href="#">Read More</a>
+        <a class="more" onclick="showSection('handmade1')" href="#">Read More</a>
     </div>
 
-    <div class="section handmade">
-        <h1>Handmade vs. Cast Jewellery (1/2)</h1>
+    <div class="section handmade1">
+        <h1>Handmade vs. Cast Jewellery (1/4)</h1>
         <div>
             The creation of fine jewellery is truly an art from the design concept
             to the finishing touches. A fine goldsmith needs only his eyes and
@@ -106,7 +114,13 @@
             jewellery. The main method of creating a top-quality, one-of-a kind
             piece is still hand fabrication. The most accomplished and
             sophisticated designers still create their artwork entirely by hand.
+        </div>
+        <a class="more" onclick="showSection('handmade2')" href="#">Read More</a>
+    </div>
 
+    <div class="section handmade2">
+        <h1>Handmade vs. Cast Jewellery (2/4)</h1>
+        <div>
             The other, more widespread method to produce jewellery employs the
             method of "lost-wax casting". In this case, the design is first
             sculpted in wax. Today, this step can be done with the aid of computer
@@ -119,11 +133,11 @@
             Especially, when the wax pieces can be cast with the gemstones already
             set in them.
         </div>
-        <a class="more" onclick="showSection('moreHandmade')" href="#">Read More</a>
+        <a class="more" onclick="showSection('handmade3')" href="#">Read More</a>
     </div>
 
-    <div class="section moreHandmade">
-        <h1>Handmade vs. Cast Jewellery (2/2)</h1>
+    <div class="section handmade3">
+        <h1>Handmade vs. Cast Jewellery (3/4)</h1>
         <div>
             Are there any drawbacks associated with casting? The age-old method of
             lost-wax casting was perfected and adopted in the jewellery industry
@@ -136,7 +150,13 @@
             sometimes "cloudy," dull surfaces. In most cases, it is very time
             consuming and difficult to get rid of imperfections during the
             finishing of a cast item.
+        </div>
+        <a class="more" onclick="showSection('handmade4')" href="#">Read More</a>
+    </div>
 
+    <div class="section handmade4">
+        <h1>Handmade vs. Cast Jewellery (4/4)</h1>
+        <div>
             In conclusion, there is definitely a place for casting in making fine
             jewellery, as long as it is done professionally, with quality
             equipment, knowledge, skills and the necessary diligence.
@@ -166,10 +186,10 @@
             polished regularly to restore its lustre. For repair and maintenance
             one should always trust a qualified and experienced goldsmith.
         </div>
-        <a class="more" onclick="showSection('goldsmithing')" href="#">Read More</a>
+        <a class="more" onclick="showSection('goldsmithing1')" href="#">Read More</a>
     </div>
 
     <script>
-        $(function (){ showSection('goldsmithing', true) });
+        $(function (){ showSection('goldsmithing1', true) });
     </script>
 [% END %]

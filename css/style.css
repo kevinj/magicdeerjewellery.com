@@ -35,8 +35,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-#gallery h1, #gallery h2,
-#info h1, #info h2 {
+#gallery h1, #gallery h2 {
     margin: 0;
 }
 
@@ -45,6 +44,7 @@ h2 {
     text-align: center;
 }
 
+body#info .section,
 body#about .section {
     margin-top: 30px;
     vertical-align: top;
@@ -81,6 +81,7 @@ h3 {
 a.more {
     float: right;
     color: #8d8d8d;
+    margin-top: 20px;
 }
 
 .content {
@@ -256,4 +257,8 @@ table#contactTable h3 {
     margin: 0;
     text-align: left;
     font-size: 10pt;
+}
+
+table#testimonials td {
+    height: 128px;
 }
