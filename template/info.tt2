@@ -38,7 +38,9 @@
             practice as jewellers, unfortunately they have been loosing their
             leading role, replaced by cheaper alternatives of lower quality.
             For more information on fine jewellery, please visit our blog:
-            <a href="vancouverjewellery.com">vancouverjewellery.com</a>.
+            <a href="http://vancouverjewellery.com">
+                vancouverjewellery.com
+            </a>.
         </div>
         <a class="more" onclick="showSection('fineJewellery')" href="#">Read More</a>
     </div>
