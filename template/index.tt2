@@ -9,7 +9,7 @@
         {name => 'home4', nolink => 1}
     ]]
 %]
-    <b>Welcome to Magic Deer Jewellery!</b>
+    <h1>Welcome to Magic Deer Jewellery!</h1>
 
     <p>
         Thank you for visiting our website! We are a dedicated team

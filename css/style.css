@@ -27,12 +27,17 @@ h1 {
     padding: 0;
 }
 
-body#about h1 {
+h1 {
     margin-bottom: 40px;
 }
 
-body#about h2 {
+h2 {
     margin-bottom: 20px;
+}
+
+#gallery h1, #gallery h2,
+#info h1, #info h2 {
+    margin: 0;
 }
 
 .header {

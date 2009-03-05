@@ -49,7 +49,7 @@
     [% MACRO selected(link) 1 IF link == name %]
     <ul class="menu">
         <li>
-            [% INCLUDE rollover.tt2 href="/"
+            [% INCLUDE rollover.tt2 href="index.html"
                 image = {
                     selected => selected('home'),
                     name => "link_home"
