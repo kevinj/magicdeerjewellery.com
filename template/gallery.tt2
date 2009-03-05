@@ -15,5 +15,12 @@
         [% END %]
     </div>
 
-    <script>$(function(){ showSection('gallery[% page %]_1') })</script>
+    <script>
+        $(function(){
+            showSection('gallery[% page %]_1');
+            $('img[name=link_gallery[% page %]]')
+                .attr('selected', true)
+                .mouseover();
+        });
+    </script>
 [% END %]
