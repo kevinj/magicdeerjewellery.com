@@ -20,7 +20,12 @@
 
 <div class="wrapper">
     <div class="header">
-        <img src="[% cache('images/header.png') %]"/>
+        [% IF svg %]
+            <embed src="[% cache('images/szarvas.svg') %]" width="300" height="100" 
+                type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+        [% ELSE %]
+            <img src="[% cache('images/header.png') %]"/>
+        [% END %]
     </div>
     <div class="phone">T: 778-318-0624</div>
     <div class="content">
