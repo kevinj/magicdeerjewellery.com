@@ -22,7 +22,7 @@
 <div class="wrapper">
     <div class="header">
         [% IF svg %]
-            <embed src="[% cache('images/szarvas.svg') %]" width="300" height="100" 
+            <embed src="[% cache('images/szarvas.svg') %]" height="150"
                 type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
         [% ELSE %]
             <img src="[% cache('images/header.png') %]"/>
