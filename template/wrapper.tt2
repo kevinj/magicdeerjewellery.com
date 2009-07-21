@@ -92,7 +92,7 @@
                 }
             %]
             <ul>
-                [% FOR page = [1,2,3] %]
+                [% FOR page = [1,2,3,4] %]
                 <li>
                     [% INCLUDE rollover.tt2 href="gallery${page}.html"
                         image = {
