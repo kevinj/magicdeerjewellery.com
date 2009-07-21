@@ -1,4 +1,5 @@
 [% images = [
+    [
         {
             name => "gallery4_1", section => "gallery4_1",
             desc => '19K White Gold Ring with Diamond'
@@ -7,6 +8,8 @@
             name => "gallery4_2", section => "gallery4_2",
             desc => '19K White Gold Band with Baguette Diamond'
         },
+    ],
+    [
         {
             name => "gallery4_3", section => "gallery4_3",
             desc => '19K White Gold Bands with Diamonds'
@@ -15,5 +18,6 @@
             name => "gallery4_4", section => "gallery4_4",
             desc => '19K White Gold Pendant with Diamond'
         },
+    ]
 ] %]
 [% INCLUDE gallery.tt2 page=3 %]

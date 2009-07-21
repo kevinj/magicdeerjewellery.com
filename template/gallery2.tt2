@@ -1,4 +1,5 @@
 [% images = [
+    [
         {
             name => "gallery2_1", section => "gallery2_1",
             desc => '19K White Gold Ring with Tourmaline and Diamonds'
@@ -15,6 +16,8 @@
             name => "gallery2_4", section => "gallery2_4",
             desc => '19K White and 18K Yellow Gold Wedding Bands with Diamond'
         },
+    ],
+    [
         {
             name => "gallery2_5", section => "gallery2_5",
             desc => '19K White Gold and 18K Yellow Gold Wedding Bands'
@@ -31,5 +34,6 @@
             name => "gallery2_8", section => "gallery2_8",
             desc => '19K White Gold Earrings with Pink Jade, Blue Topaz and Diamonds'
         }
+    ]
 ] %]
 [% INCLUDE gallery.tt2 page=2 %]

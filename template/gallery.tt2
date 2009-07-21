@@ -1,17 +1,19 @@
 [% WRAPPER wrapper.tt2
     name="gallery"
     title="Gallery"
-    imgs=[[ images.0, images.1, images.2, images.3 ],
-          [ images.4, images.5, images.6, images.7 ]]
+    imgs=[images.0, images.1]
     more=1
 %]
 
     <div class="gallery">
-        [% FOR img = images %]
-            <div class="section [% img.name %]">
-                <img class="target" src="[% cache("images/${img.name}_big.jpg") %]"/>
-                <div class="description"><h1>[% img.desc %]</h1></div>
-            </div>
+        [% FOR col = images %]
+            [% FOR img = col %]
+                <div class="section [% img.name %]">
+                    <img class="target"
+                         src="[% cache("images/${img.name}_big.jpg") %]"/>
+                    <div class="description"><h1>[% img.desc %]</h1></div>
+                </div>
+            [% END %]
         [% END %]
     </div>
 

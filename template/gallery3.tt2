@@ -1,4 +1,5 @@
 [% images = [
+    [
         {
             name => "gallery3_1", section => "gallery3_1",
             desc => '19K White Gold Wedding Bands'
@@ -15,6 +16,8 @@
             name => "gallery3_4", section => "gallery3_4",
             desc => '19K White Gold Wedding Bands with Diamonds'
         },
+    ],
+    [
         {
             name => "gallery3_5", section => "gallery3_5",
             desc => '19K White Gold and 18K Yellow Gold Ring with Garnet and Diamonds'
@@ -31,5 +34,6 @@
             name => "gallery3_8", section => "gallery3_8",
             desc => '19K White Gold Wedding Band'
         }
+    ]
 ] %]
 [% INCLUDE gallery.tt2 page=3 %]

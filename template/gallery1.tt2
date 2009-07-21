@@ -1,4 +1,5 @@
 [% images = [
+    [
         {
             name => "gallery1_1", section => "gallery1_1",
             desc => '19K White Gold Engagement Ring with Diamonds'
@@ -15,6 +16,8 @@
             name => "gallery1_4", section => "gallery1_4",
             desc => '19K White Gold and 18K Yellow Gold Earrings with Diamond and Tourmaline'
         },
+    ],
+    [
         {
             name => "gallery1_5", section => "gallery1_5",
             desc => '19K White Gold Ring with Aquamarine'
@@ -31,5 +34,6 @@
             name => "gallery1_8", section => "gallery1_8",
             desc => '18K Gold Hand-made Chain'
         }
+    ]
 ] %]
 [% INCLUDE gallery.tt2 page=1 %]
