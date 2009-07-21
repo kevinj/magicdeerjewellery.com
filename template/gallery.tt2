@@ -3,11 +3,13 @@
     title="Gallery"
     imgs=[images.0, images.1]
     more=1
+    cellStyle="height:96px"
 %]
 
     <div class="gallery">
         [% FOR col = images %]
             [% FOR img = col %]
+                [% NEXT UNLESS img.name %] 
                 <div class="section [% img.name %]">
                     <img class="target"
                          src="[% cache("images/${img.name}_big.jpg") %]"/>

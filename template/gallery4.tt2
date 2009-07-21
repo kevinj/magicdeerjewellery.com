@@ -8,6 +8,8 @@
             name => "gallery4_2", section => "gallery4_2",
             desc => '19K White Gold Band with Baguette Diamond'
         },
+        {},
+        {}
     ],
     [
         {
@@ -18,6 +20,8 @@
             name => "gallery4_4", section => "gallery4_4",
             desc => '19K White Gold Pendant with Diamond'
         },
+        {},
+        {}
     ]
 ] %]
 [% INCLUDE gallery.tt2 page=4 %]

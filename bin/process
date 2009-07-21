@@ -10,7 +10,11 @@ my $time = <$fh>;
 chomp $time;
 
 my $vars = {
-    cache => sub { $_[0] . '?_=' . (stat($_[0]))[9] }
+    cache => sub {
+        my $file = shift;
+        warn $file unless -f $file;
+        return $file . '?_=' . (stat($file))[9];
+    }
 };
 
 my $tt2 = Template->new({
