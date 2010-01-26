@@ -11,15 +11,8 @@
       <tr>
         <td>
           <h3>Studio location: </h3>
-          Suite 4 - 86 Moody Street <br/>
-          Port Moody, British Columbia<br/>
-          V3H 2P6, Canada<br/>
-
-          <h3>Directions</h3>
-          You find us in the north-eastern corner at the
-          intersection of Moody Street and St. Johns Street.
-          (Second floor in the grey building of the
-          "Great Canadian Card Company")
+          Vancouver, British Columbia<br/>
+          Canada<br/>
         </td>
       </tr>
   
@@ -27,6 +20,9 @@
         <td>
           <h3>Telephone</h3>
           778.318.0624
+
+          <br/>
+          <br/>
 
           <h3>Hours</h3>
           To best serve you please call ahead for an appointment!
@@ -37,6 +33,10 @@
         <td>
           <h3>Email</h3>
           <a href='#' id="email"></a>
+
+          <br/>
+          <br/>
+
           <h3>Blog</h3>
           <a href="http://vancouverjewellery.com">vancouverjewellery.com</a>
         </td>
