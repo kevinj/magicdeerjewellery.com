@@ -1,0 +1,9 @@
+[% WRAPPER wrapper.tt2
+    name="gallery"
+    title="Gallery"
+    cellStyle="height:96px"
+%]
+    <div class="gallery">
+        This page is temporarily unavailable.
+    </div>
+[% END %]
