@@ -2,38 +2,28 @@
 use strict;
 use warnings;
 use Data::Dump 'dump';
+use Net::FTP;
+use File::Basename qw(dirname);
+use File::Slurp qw(slurp);
 
-my $modfile = ".modtimes";
+my $password = slurp('PASSWORD') || die "No PASSWORD file!";
 
-sub load_times {
-    my $modtimes = {};
-    if (-f $modfile) {
-        open my $fh, "<$modfile";
-        my @lines = <$fh>;
-        $modtimes = eval(join "", @lines);
+my $ftp = Net::FTP->new("magicdeerjewellery.com", Passive => 1) or die $@;
+$ftp->login("magicdeerjewellery", $password) or $ftp->message;
+$ftp->binary;
+
+my $glob = shift || "*.html css/* javascript/* images/*";
+my @files = glob($glob);
+
+for my $file (@files) {
+    my $remote_time = $ftp->mdtm($file);
+    my $local_time = (stat($file))[9]; 
+
+    if ($ENV{FORCE} or $remote_time < $local_time) {
+        warn "Uploading $file...\n";
+        $ftp->put($file, $file)
+            or die "Error uploading $file: " . $ftp->message;
     }
-    return $modtimes;
 }
 
-sub save_times {
-    my $modtimes = shift;
-    open my $fh, ">$modfile" or die $!;
-    print $fh dump $modtimes;
-    close $fh;
-}
-
-sub upload {
-    my ($glob, $to, $modtimes) = @_;
-    my @files =
-        grep { not exists $modtimes->{$_} or ($modtimes->{$_} < (stat $_)[9]) }
-        glob($glob);
-
-    system "scp -r -P 222 @files vanjew\@magicdeerjewellery.com:$to" if @files;
-    $modtimes->{$_} = (stat $_)[9] for @files;
-}
-
-my $modtimes = load_times;
-upload('*.html' => '', $modtimes);
-upload('images/*' => 'images', $modtimes);
-upload('javascript/*' => 'javascript', $modtimes);
-save_times ($modtimes);
+$ftp->quit;

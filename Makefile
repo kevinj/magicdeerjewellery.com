@@ -15,16 +15,8 @@ clean:
 	$(PERL) bin/process $(@:%.html=%) $(TIME)
 	@grep $@ .gitignore >/dev/null || echo $@ >> .gitignore && :
 
-HOST:=vanjew@magicdeerjewellery.com:
-PORT:=222
+HOST:=magicdeerjewellery@magicdeerjewellery.com:
+PORT:=21
 
-upload-html:
-	scp -P $(PORT) -r *.html css/ $(HOST)
-
-upload-js:
-	scp -P $(PORT) -r javascript/ $(HOST)
-
-upload-images:
-	scp -P $(PORT) -r images/ $(HOST)
-
-upload: upload-html upload-js upload-images
+upload:
+	bin/upload
