@@ -1,12 +1,13 @@
-^ Done
-* -About us: Make the selected link selected-
-* -About us: Add "Read More" links-
-* -Gallery: Make the selected link selected-
-* -Info: Incorporate the images from Tibi and make it more like "Home"-
-* -Make the telephone number text and align with grey-
-* -Don't fade out on click on the gallery-
-* -Contact: Make the contact link spam-proof-
-* -Convert images to PNG and make the background transparent-
-* -Gallery: Add description-
-* -Gallery: Changing pages on the gallery should change the big photo-
-* -Gallery: Make the gallery link a context menu-
+Galleries:
+* Gallery3
+** Bottom right can stay
+
+Text:
+* Instead of a description: "For more designs contact us"
+
+Home:
+* Replace left bottom and both right
+
+Contact:
+* Make sure the pictures are left aligned
+* Change phone number to Andrea's
