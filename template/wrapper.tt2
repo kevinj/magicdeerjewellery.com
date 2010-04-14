@@ -85,14 +85,13 @@
             %]
         </li>
         <li class="submenu">
-            [% INCLUDE rollover.tt2 href="construction.html"
+            [% INCLUDE rollover.tt2 href="gallery1.html"
                 image = {
                     selected => selected('gallery'),
                     name => "link_gallery"
 
                 }
             %]
-            <!--
             <ul>
                 [% FOR page = [1,2,3,4] %]
                 <li>
@@ -105,7 +104,6 @@
                 </li>
                 [% END %]
             </ul>
-            -->
         </li>
         <li>
             [% INCLUDE rollover.tt2 href="testimonials.html"
