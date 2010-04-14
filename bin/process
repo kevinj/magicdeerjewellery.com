@@ -5,9 +5,6 @@ use warnings;
 use Template;
 
 my $name = shift || die "USAGE: $0 <name>\n";
-open my $fh, 'make-time' or die "make-time doesn't exist!";
-my $time = <$fh>;
-chomp $time;
 
 my $vars = {
     cache => sub {
