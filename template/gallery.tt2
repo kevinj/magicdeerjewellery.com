@@ -9,11 +9,13 @@
     <div class="gallery">
         [% FOR col = images %]
             [% FOR img = col %]
-                [% NEXT UNLESS img.name %] 
-                <div class="section [% img.name %]">
+                [% NEXT UNLESS img.section %] 
+                <div class="section [% img.section %]">
                     <img class="target"
-                         src="[% cache("images/${img.name}_big.jpg") %]"/>
-                    <div class="description"><h1>[% img.desc %]</h1></div>
+                         src="[% cache("images/${img.section}.png") %]"/>
+                    <div class="description">
+                        <h1>For more designs contact us</h1>
+                    </div>
                 </div>
             [% END %]
         [% END %]
@@ -21,7 +23,7 @@
 
     <script>
         $(function(){
-            showSection('gallery[% page %]_1');
+            showSection('[% images.0.0.section %]');
             $('img[name=link_gallery[% page %]]')
                 .attr('selected', true)
                 .mouseover();

@@ -3,7 +3,8 @@ function fadeToSection (section) {
     if (SHOWING++) return;
     if (jQuery('.section:visible').size()) {
         jQuery('.section:visible').fadeOut(function () {
-            jQuery('div.'+section).fadeIn(function () { SHOWING = 0 });
+            jQuery('div.'+section)
+                .fadeIn(function () { SHOWING = 0 });
         });
     }
     else {
@@ -13,7 +14,7 @@ function fadeToSection (section) {
 
 function showSection (section, nofade) {
     var shown = false;
-    $('img.rollover').each(function () {
+    $('.rollover').each(function () {
         if ($(this).attr('section') == section) {
             $(this).click();
             shown = true;
@@ -25,28 +26,29 @@ function showSection (section, nofade) {
 }
 
 $(function () {
-    $('img.rollover')
-        .mouseover(function (){
-            var name = $(this).attr('name');
-            if (this.src.match(/_hover/)) return;
-            this.src = this.src.replace(RegExp(name), name + '_hover');
-        })
-        .mouseout(function (){
-            if ($(this).attr('selected')) return;
-            if (!this.src.match(/_hover/)) return;
-            var name = $(this).attr('name');
-            this.src = this.src.replace(RegExp(name + '_hover'), name);
-        })
-        .click(function (){
-            var section = $(this).attr('section');
-            if (section) {
-                if (!SHOWING) {
-                    $('.main img.rollover').attr('selected', '').mouseout();
-                    $(this).attr('selected', true).mouseover();
-                }
-                fadeToSection('.' + section);
+    $('.rollover')
+        .mouseover(function() {
+            if ($('.hover', this).size()) {
+                $('.image', this).hide();
+                $('.hover', this).show();
             }
-            return $(this).attr('href') == '#' ? false : true;
+        })
+        .mouseout(function() {
+            if ($(this).hasClass('selected')) return;
+            if ($('.hover', this).is(':visible')) {
+                $('.hover', this).hide();
+                $('.image', this).show();
+            }
+        })
+        .click(function() {
+            if (!$(this).attr('section')) return;
+            fadeToSection('.' + $(this).attr('section'))
+            $('.rollover.selected')
+                .removeClass('selected')
+                .mouseout();
+            $(this).addClass('selected')
+                .mouseover();
+            return false;
         });
 
         /* Hack around IE which doesn't support li:hover.

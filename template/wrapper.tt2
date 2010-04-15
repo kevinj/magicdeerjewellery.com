@@ -33,23 +33,23 @@
         <table class="main">
             <tr>
                 <td style="[% cellStyle %]" class="top left">
-                    [% INCLUDE rollover.tt2 image=imgs.0.0 IF imgs.0.0.name %]
+                    [% INCLUDE rollover.tt2 image=imgs.0.0 IF imgs.0.0.src %]
                 </td>
                 <td rowspan="[% last %]">
                     [% content %]
                 </td>
                 <td style="[% cellStyle %]" class="top right">
-                    [% INCLUDE rollover.tt2 image=imgs.1.0 IF imgs.1.0.name %]
+                    [% INCLUDE rollover.tt2 image=imgs.1.0 IF imgs.1.0.src %]
                 </td>
             </tr>
             [% last = last - 1 %]
             [% FOR i = [1 .. last] %]
             <tr>
                 <td style="[% cellStyle %]" class="left [% IF i < last %]middle[% ELSE %]bottom[% END %]">
-                    [% INCLUDE rollover.tt2 image=imgs.0.$i IF imgs.0.$i.name %]
+                    [% INCLUDE rollover.tt2 image=imgs.0.$i IF imgs.0.$i.src %]
                 </td>
                 <td style="[% cellStyle %]" class="right [% IF i < last %]middle[% ELSE %]bottom[% END %]">
-                    [% INCLUDE rollover.tt2 image=imgs.1.$i IF imgs.1.$i.name %]
+                    [% INCLUDE rollover.tt2 image=imgs.1.$i IF imgs.1.$i.src %]
                 </td>
             </tr>
             [% END %]
@@ -60,64 +60,76 @@
     [% MACRO selected(link) 1 IF link == name %]
     <ul class="menu">
         <li>
-            [% INCLUDE rollover.tt2 href="index.html"
+            [% INCLUDE rollover.tt2
                 image = {
-                    selected => selected('home'),
-                    name => "link_home"
+                    href="index.html"
+                    selected => selected('home')
+                    hover => "link_home_hover.png"
+                    src => "link_home.png"
                 }
             %]
         </li>
         <li>
-            [% INCLUDE rollover.tt2 href="about.html"
+            [% INCLUDE rollover.tt2
                 image = {
-                    selected => selected('about'),
-                    name=>"link_about"
+                    href="about.html"
+                    selected => selected('about')
+                    hover=>"link_about_hover.png"
+                    src=>"link_about.png"
                 }
             %]
         </li>
         <li>
-            [% INCLUDE rollover.tt2 href="contact.html"
+            [% INCLUDE rollover.tt2
                 image = {
-                    selected => selected('contact'),
-                    name => "link_contact"
+                    href="contact.html"
+                    selected => selected('contact')
+                    hover => "link_contact_hover.png"
+                    src => "link_contact.png"
 
                 }
             %]
         </li>
         <li class="submenu">
-            [% INCLUDE rollover.tt2 href="gallery1.html"
+            [% INCLUDE rollover.tt2
                 image = {
+                    href="gallery1.html"
                     selected => selected('gallery'),
-                    name => "link_gallery"
-
+                    hover => "link_gallery_hover.png"
+                    src => "link_gallery.png"
                 }
             %]
             <ul>
-                [% FOR page = [1,2,3,4] %]
+                [% FOR page = [1,2] %]
                 <li>
-                    [% INCLUDE rollover.tt2 href="gallery${page}.html"
+                    [% INCLUDE rollover.tt2
                         image = {
-                            name=>"link_gallery${page}"
+                            href="gallery${page}.html"
+                            hover=>"link_gallery${page}_hover.png"
+                            src=>"link_gallery${page}.png"
                         }
-
                     %]
                 </li>
                 [% END %]
             </ul>
         </li>
         <li>
-            [% INCLUDE rollover.tt2 href="testimonials.html"
+            [% INCLUDE rollover.tt2
                 image = {
-                    selected => selected('testimonial'),
-                    name => "link_testimonial"
+                    href="testimonials.html"
+                    selected => selected('testimonial')
+                    hover => "link_testimonial_hover.png"
+                    src => "link_testimonial.png"
                 }
             %]
         </li>
         <li>
-            [% INCLUDE rollover.tt2 href="info.html"
+            [% INCLUDE rollover.tt2
                 image = {
-                    selected => selected('info'),
-                    name => "link_info"
+                    href="info.html"
+                    selected => selected('info')
+                    hover => "link_info_hover.png"
+                    src => "link_info.png"
                 }
             %]
         </li>

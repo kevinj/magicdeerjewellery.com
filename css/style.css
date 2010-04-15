@@ -122,6 +122,7 @@ td.middle {
 }
 td.left, td.right {
     text-align: center;
+    width: 90px;
 }
 
 .section {
@@ -228,7 +229,7 @@ li.submenu:hover ul, li.submenu.hover ul {
 }
 
 /* Image sizes */
-body#gallery .main img.rollover {
+body#gallery .main .rollover img{
     height: 90px;
     width: 120px;
 }
@@ -238,7 +239,7 @@ body#gallery .section img.target {
     height: 360px;
 }
 
-body#testimonial .main img.rollover {
+body#testimonial .main .rollover img {
     height: 114px;
     width: 169px;
 }

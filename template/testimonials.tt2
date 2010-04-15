@@ -2,9 +2,18 @@
     name="testimonial"
     title="Testimonials"
     imgs=[[
-        {name=>'testimonials1', nolink=>1},
-        {name=>'testimonials2', nolink=>1},
-        {name=>'testimonials3', nolink=>1}
+        {
+            src => 'testimonials1.png',
+            hover => 'testimonials1_hover.png',
+        }
+        {
+            src => 'testimonials2.png',
+            name => 'testimonials2_hover.png',
+        }
+        {
+            src => 'testimonials3.png',
+            name => 'testimonials3_hover.png',
+        }
     ]]
 %]
 <table id="testimonials">

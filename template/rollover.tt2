@@ -1,24 +1,22 @@
-[% type = image.type || 'png' %]
-<script>var img = new Image; img.src="[% cache("images/${image.name}_hover.$type") %]"</script>
-
-[% UNLESS image.nolink %]
-<a name="[% image.name %]" class="navButton" href="[% href || '#' %]">
+[% IF image.href || image.section %]
+<a name="[% image.name %]" section="[% image.section %]"
+    class="rollover" href="[% image.href || '#' %]">
+[% ELSE %]
+<div class="rollover" name="[% image.section %]">
 [% END %]
 
-[% IF image.selected;
-    file = cache("images/${image.name}_hover.$type");
-  ELSE;
-    file = cache("images/${image.name}.$type");
-  END
-%]
+    [% IF image.hover %]
+        <img class="hover" 
+            [% IF !image.selected %]style="display: none"[% END %]
+            src="[% cache("images/${image.hover}") %]" />
+    [% END %]
 
-<img src="[% file %]"
-     class="rollover"
-     selected="[% image.selected %]"
-     menu="[% image.menu %]"
-     section="[% image.section %]"
-     name="[% image.name %]"/>
+    <img class="image" 
+        [% IF image.selected %]style="display: none"[% END %]
+        src="[% cache("images/${image.src}") %]" />
 
-[% UNLESS image.nolink %]
+[% IF image.href || image.section %]
 </a>
+[% ELSE %]
+</div>
 [% END %]

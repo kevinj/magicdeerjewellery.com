@@ -2,13 +2,31 @@
     name="info"
     title=""
     imgs=[[
-            {name => 'info1', section => 'goldsmithing1'},
-            {name => 'info2', section => 'fineJewellery'},
-            {name => 'info3', section => 'metals' }
+            {
+                section => 'goldsmithing1',
+                src => 'info1.png', hover => 'info1_hover.png',
+            },
+            {
+                section => 'fineJewellery',
+                src => 'info2.png', hover => 'info2_hover.png',
+            },
+            {
+                src => 'info3.png', hover => 'info3_hover.png',
+                section => 'metals',
+            }
         ], [
-            {name => 'info4', section => 'gemstones' },
-            {name => 'info5', section => 'handmade1'},
-            {name => 'info6', section => 'care'}
+            {
+                src => 'info4.png', hover => 'info4_hover.png',
+                section => 'gemstones',
+            },
+            {
+                src => 'info5.png', hover => 'info5_hover.png',
+                section => 'handmade1',
+            },
+            {
+                src => 'info6.png', hover => 'info6_hover.png',
+                section => 'care',
+            }
     ]]
 %]
     <div class="section goldsmithing1">

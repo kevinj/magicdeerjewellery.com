@@ -2,9 +2,9 @@
     name="contact"
     title="Magic Deer Jewellery"
     imgs=[[
-        {name => 'contact1', nolink => 1},
-        {name => 'contact2', nolink => 1},
-        {name => 'contact3', nolink => 1}
+        { src => 'contact1.png', hover => 'contact1_hover.png' },
+        { src => 'contact2.png', hover => 'contact2_hover.png' },
+        { src => 'contact3.png', hover => 'contact3_hover.png' }
     ]]
 %]
     <table id="contactTable">

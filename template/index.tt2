@@ -2,11 +2,19 @@
     name="home"
     title="Magic Deer Jewellery"
     imgs=[[
-        {name => 'home1', nolink => 1},
-        {name => 'home2', nolink => 1}
+            {
+                src => 'home1.png', hover => 'home1_hover.png',
+            },
+            {
+                src => 'home2.png', hover => 'home2_hover.png',
+            }
         ],[
-        {name => 'home3', nolink => 1},
-        {name => 'home4', nolink => 1}
+            {
+                src => 'home3.png', hover => 'home3_hover.png',
+            },
+            {
+                src => 'home4.png', hover => 'home4_hover.png',
+            }
     ]]
 %]
     <h1>Welcome to Magic Deer Jewellery!</h1>

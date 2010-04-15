@@ -2,11 +2,23 @@
     name="about"
     title="About Magic Deer Jewellery"
     imgs=[[
-            { name => 'about1', section => 'luxury' },
-            { name => 'about2', section => 'design' }
+            {
+                section => 'luxury',
+                src => 'about1.png', hover=>'about1_hover.png',
+            },
+            {
+                section => 'design',
+                src => 'about2.png', hover=>'about2_hover.png',
+            }
         ], [
-            { name => 'about3', section => 'quality' },
-            { name => 'about4', section => 'approach' }
+            {
+                section => 'quality',
+                src => 'about3.png', hover=>'about3_hover.png',
+            },
+            {
+                section => 'approach',
+                src => 'about4.png', hover=>'about4_hover.png',
+            }
         ]
     ]
 %]

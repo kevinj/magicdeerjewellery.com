@@ -1,39 +1,15 @@
 [% images = [
     [
-        {
-            name => "gallery1_1", section => "gallery1_1",
-            desc => '19K White Gold Engagement Ring with Diamonds'
-        },
-        {
-            name => "gallery1_2", section => "gallery1_2",
-            desc => '19K White Gold Pendant With Aquamarine and Diamonds'
-        },
-        {
-            name => "gallery1_3", section => "gallery1_3",
-            desc => '19K White Gold Wedding Band with Diamonds'
-        },
-        {
-            name => "gallery1_4", section => "gallery1_4",
-            desc => '19K White Gold and 18K Yellow Gold Earrings with Diamond and Tourmaline'
-        },
+        { src => "gallery_01S.png", section => "gallery_01L" },
+        { src => "gallery_02S.png", section => "gallery_02L" },
+        { src => "gallery_03S.png", section => "gallery_03L" },
+        { src => "gallery_04S.png", section => "gallery_04L" },
     ],
     [
-        {
-            name => "gallery1_5", section => "gallery1_5",
-            desc => '19K White Gold Ring with Aquamarine'
-        },
-        {
-            name => "gallery1_6", section => "gallery1_6",
-            desc => '19K White Gold and 18K Yellow Gold Wedding Band'
-        },
-        {
-            name => "gallery1_7", section => "gallery1_7",
-            desc => '19K White Gold Wedding Band with Diamonds'
-        },
-        {
-            name => "gallery1_8", section => "gallery1_8",
-            desc => '18K Gold Hand-made Chain'
-        }
+        { src => "gallery_05S.png", section => "gallery_05L" },
+        { src => "gallery_06S.png", section => "gallery_06L" },
+        { src => "gallery_07S.png", section => "gallery_07L" },
+        { src => "gallery_08S.png", section => "gallery_08L" },
     ]
 ] %]
 [% INCLUDE gallery.tt2 page=1 %]
